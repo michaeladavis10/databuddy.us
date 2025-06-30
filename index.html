@@ -4,677 +4,701 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DataBuddy LLC - Unlock Your Data's True Potential</title>
+    <title>DataBuddy LLC - Unlock Your Business's Next Level</title>
     <meta name="description"
-        content="DataBuddy LLC offers outcome-oriented data consulting for SMBs (> $1M revenue), delivering 5x ROI by transforming information into actionable insights.">
+        content="DataBuddy LLC helps SMBs with over $1M revenue transform their information into actionable insights, guaranteeing a 5x return on investment. Specializing in outcome-oriented data consulting.">
     <meta name="keywords"
-        content="data consulting, SMB data, business intelligence, data strategy, data analytics, ROI, DataBuddy LLC">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+        content="data consulting, SMB, small business, enterprise, data analytics, business intelligence, ROI, return on investment, data strategy, LinkedIn, Snowflake, TripAdvisor, DataBuddy LLC">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* General Styles */
-        :root {
-            --primary-color: #6350ec;
-            --text-dark: #333333;
-            --text-light: #f0f0f0;
-            --background-light: #ffffff;
-            --background-gray: #f8f8f8;
-            --background-dark: #1a1a1a;
-            --white: #ffffff;
-            --black: #000000;
-        }
+        /* Custom styles for the Inter font and purple accent */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
         body {
             font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: var(--text-dark);
-            line-height: 1.6;
-            background-color: var(--background-light);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            color: #1a202c;
+            /* Default dark grey for text */
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+        /* Custom purple color */
+        .bg-databuddy-purple {
+            background-color: #6350ec;
         }
 
-        section {
-            padding: 80px 0;
+        .text-databuddy-purple {
+            color: #6350ec;
         }
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            color: var(--black);
-            line-height: 1.2;
-            margin-bottom: 20px;
+        .border-databuddy-purple {
+            border-color: #6350ec;
         }
 
-        h1 {
-            font-size: 3em;
-        }
-
-        /* Responsive adjustment below */
-        h2 {
-            font-size: 2.5em;
-        }
-
-        /* Responsive adjustment below */
-        h3 {
-            font-size: 2em;
-        }
-
-        p {
-            margin-bottom: 1em;
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            padding: 14px 28px;
-            border-radius: 10px;
-            /* Rounded corners */
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: 2px solid transparent;
-            text-align: center;
-        }
-
-        .btn-primary {
-            background-color: var(--primary-color);
-            color: var(--white);
-            box-shadow: 0 4px 15px rgba(99, 80, 236, 0.3);
-        }
-
+        /* Style for interactive elements on hover/focus */
         .btn-primary:hover {
-            background-color: #4e3ae1;
-            /* Slightly darker primary */
-            box-shadow: 0 6px 20px rgba(99, 80, 236, 0.4);
+            opacity: 0.9;
         }
 
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--primary-color);
-            border-color: var(--primary-color);
+        .btn-primary:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(99, 80, 236, 0.5);
+            /* Focus ring */
         }
 
-        .btn-secondary:hover {
-            background-color: var(--primary-color);
-            color: var(--white);
+        .link-hover:hover {
+            color: #6350ec;
+            /* Purple on hover for links */
         }
 
-        /* Header */
-        .header {
-            background-color: var(--white);
-            padding: 20px 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            /* Allow wrapping for mobile */
-        }
-
-        .logo {
-            font-size: 1.8em;
-            font-weight: 700;
-            color: var(--primary-color);
-            text-decoration: none;
-            padding: 5px 0;
-            /* Adjust padding for better spacing */
-        }
-
-        .logo-img {
-            max-height: 40px;
-            /* Adjust as needed */
-            width: auto;
-        }
-
-        .nav-menu {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 30px;
-            /* Space between nav items */
-        }
-
-        .nav-menu li a {
-            color: var(--black);
-            text-decoration: none;
-            font-weight: 500;
-            padding: 8px 0;
+        /* Responsive iframe for Calendly */
+        .calendly-container {
             position: relative;
-        }
-
-        .nav-menu li a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            background-color: var(--primary-color);
-            left: 0;
-            bottom: -5px;
-            transition: width 0.3s ease;
-        }
-
-        .nav-menu li a:hover::after {
-            width: 100%;
-        }
-
-        .nav-menu li a:hover {
-            color: var(--primary-color);
-        }
-
-        .nav-toggle {
-            display: none;
-            /* Hidden on desktop */
-            font-size: 2em;
-            background: none;
-            border: none;
-            cursor: pointer;
-            color: var(--black);
-        }
-
-        /* Hero Section */
-        .hero {
-            background-color: var(--background-light);
-            text-align: center;
-            padding: 100px 0;
-            display: flex;
-            align-items: center;
-            min-height: 70vh;
-            /* Make it take up a good portion of the viewport */
-        }
-
-        .hero h1 {
-            font-size: 3.8em;
-            font-weight: 700;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-            color: var(--black);
-        }
-
-        .hero h1 .highlight {
-            color: var(--primary-color);
-        }
-
-        .hero p {
-            font-size: 1.3em;
-            max-width: 800px;
-            margin: 20px auto 40px auto;
-            color: var(--text-dark);
-        }
-
-        .hero .btn-group {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        /* Problem/Solution Section */
-        .problem-solution {
-            background-color: var(--background-gray);
-            text-align: center;
-        }
-
-        .problem-solution h2 {
-            font-size: 2.8em;
-            color: var(--black);
-            margin-bottom: 40px;
-        }
-
-        .problem-solution .content {
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1.1em;
-            color: var(--text-dark);
-        }
-
-        /* Why DataBuddy Section */
-        .why-databuddy {
-            background-color: var(--white);
-            text-align: center;
-        }
-
-        .why-databuddy h2 {
-            font-size: 2.8em;
-            color: var(--black);
-            margin-bottom: 50px;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            text-align: left;
-        }
-
-        .feature-item {
-            background-color: var(--white);
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
+            height: 600px;
+            /* Adjust height as needed */
             overflow: hidden;
+            border-radius: 12px;
         }
 
-        .feature-item::before {
-            content: '';
+        .calendly-container iframe {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            height: 10px;
-            background-color: var(--primary-color);
-            transition: height 0.3s ease;
+            height: 100%;
+            border: 0;
         }
 
-        .feature-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-        }
-
-        .feature-item h3 {
-            color: var(--primary-color);
-            font-size: 1.6em;
-            margin-bottom: 15px;
-            padding-top: 10px;
-            /* Space for the top bar */
-        }
-
-        .feature-item p {
-            color: var(--text-dark);
-            font-size: 1em;
-        }
-
-        /* Newsletter Section */
-        .newsletter {
-            background-color: var(--primary-color);
-            color: var(--white);
+        /* Basic form success message styling */
+        .success-message {
+            display: none;
+            background-color: #d1fae5;
+            /* Green light background */
+            color: #065f46;
+            /* Dark green text */
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
             text-align: center;
-            padding: 80px 20px;
-        }
-
-        .newsletter h2 {
-            color: var(--white);
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-
-        .newsletter p {
-            font-size: 1.1em;
-            max-width: 700px;
-            margin: 0 auto 30px auto;
-        }
-
-        .newsletter-form {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .newsletter-form input[type="email"] {
-            flex-grow: 1;
-            padding: 14px 20px;
-            border: none;
-            border-radius: 10px;
-            font-size: 1em;
-            max-width: 400px;
-        }
-
-        .newsletter-form button {
-            background-color: var(--black);
-            color: var(--white);
-            border: none;
-            padding: 14px 28px;
-            border-radius: 10px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .newsletter-form button:hover {
-            background-color: #444;
-            /* Darker black */
-        }
-
-        /* Footer */
-        .footer {
-            background-color: var(--background-dark);
-            color: var(--text-light);
-            padding: 60px 0;
-            text-align: center;
-            font-size: 0.9em;
-        }
-
-        .footer .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 30px;
-        }
-
-        .footer .logo {
-            font-size: 1.5em;
-            color: var(--white);
-        }
-
-        .footer-nav {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 25px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .footer-nav li a {
-            color: var(--text-light);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-nav li a:hover {
-            color: var(--primary-color);
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 20px;
-        }
-
-        .social-icon {
-            color: var(--text-light);
-            font-size: 1.5em;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .social-icon:hover {
-            color: var(--primary-color);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .hero h1 {
-                font-size: 3em;
-            }
-
-            .hero p {
-                font-size: 1.1em;
-            }
-
-            h2 {
-                font-size: 2em;
-            }
-
-            section {
-                padding: 60px 0;
-            }
-
-            .nav-menu {
-                gap: 20px;
-            }
-
-            .feature-item {
-                padding: 25px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .header .container {
-                flex-direction: column;
-                align-items: flex-start;
-                /* Align logo left */
-            }
-
-            .nav-toggle {
-                display: block;
-                position: absolute;
-                top: 25px;
-                right: 20px;
-            }
-
-            .nav-menu {
-                flex-direction: column;
-                width: 100%;
-                text-align: center;
-                display: none;
-                /* Hidden by default for mobile */
-                margin-top: 20px;
-                gap: 10px;
-            }
-
-            .nav-menu.active {
-                display: flex;
-                /* Show when active */
-            }
-
-            .nav-menu li a {
-                padding: 10px 0;
-                display: block;
-            }
-
-            .btn-header {
-                display: none;
-                /* Hide header button on mobile nav */
-            }
-
-            .hero {
-                padding: 80px 20px;
-            }
-
-            .hero h1 {
-                font-size: 2.5em;
-            }
-
-            .hero p {
-                font-size: 1em;
-            }
-
-            .hero .btn-group {
-                flex-direction: column;
-            }
-
-            .btn {
-                width: 100%;
-                max-width: 300px;
-            }
-
-            .newsletter-form {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .newsletter-form input[type="email"],
-            .newsletter-form button {
-                width: 100%;
-                max-width: 400px;
-            }
-
-            .problem-solution h2,
-            .why-databuddy h2 {
-                font-size: 2em;
-            }
-
-            .footer-nav {
-                flex-direction: column;
-                gap: 15px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2em;
-            }
-
-            .hero p {
-                font-size: 0.9em;
-            }
-
-            h2 {
-                font-size: 1.8em;
-            }
-
-            section {
-                padding: 50px 0;
-            }
-
-            .feature-item h3 {
-                font-size: 1.4em;
-            }
-
-            .newsletter h2 {
-                font-size: 2em;
-            }
         }
     </style>
 </head>
 
-<body>
+<body class="bg-white">
 
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <a href="#" class="logo">
-                <!-- Placeholder for your DataBuddy LLC logo image -->
-                <!-- Ideally, you'd host this image on GitHub Pages too (e.g., /assets/logo.png) -->
-                <!-- <img src="assets/databuddy-logo.png" alt="DataBuddy LLC Logo" class="logo-img"> -->
-                DataBuddy LLC
-            </a>
-            <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-            <nav>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#services-section">Services</a></li>
-                    <li><a href="#about-section">About Us</a></li>
-                    <li><a href="#case-studies-section">Our Impact</a></li>
-                    <li><a href="#contact-section">Contact</a></li>
-                    <li><a href="https://calendly.com/your-calendly-link" target="_blank"
-                            class="btn btn-primary btn-header">Book a Free Consultation</a></li>
-                </ul>
-            </nav>
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-sm py-4">
+        <nav class="container mx-auto px-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-gray-900">
+                <!-- Placeholder for Logo -->
+                <a href="/" class="flex items-center">
+                    <img src="assets/DataBuddy logo color RGB.png" alt="DataBuddy LLC Logo" class="h-10 w-auto mr-2">
+                </a>
+            </div>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#home"
+                        class="text-gray-700 hover:text-databuddy-purple font-medium rounded-md transition duration-300">Home</a>
+                </li>
+                <li><a href="#services"
+                        class="text-gray-700 hover:text-databuddy-purple font-medium rounded-md transition duration-300">Services</a>
+                </li>
+                <li><a href="#your-advantage"
+                        class="text-gray-700 hover:text-databuddy-purple font-medium rounded-md transition duration-300">Your
+                        Advantage</a></li>
+                <li><a href="#my-story"
+                        class="text-gray-700 hover:text-databuddy-purple font-medium rounded-md transition duration-300">My
+                        Story</a></li>
+                <li><a href="#technical-expertise"
+                        class="text-gray-700 hover:text-databuddy-purple font-medium rounded-md transition duration-300">Technical
+                        Expertise</a></li>
+                <li><a href="#case-studies"
+                        class="text-gray-700 hover:text-databuddy-purple font-medium rounded-md transition duration-300">Case
+                        Studies</a></li>
+                <li><a href="#contact"
+                        class="text-gray-700 hover:text-databuddy-purple font-medium rounded-md transition duration-300">Contact</a>
+                </li>
+                <li>
+                    <a href="#calendly"
+                        class="bg-databuddy-purple text-white px-5 py-2 rounded-lg font-semibold shadow-md hover:opacity-90 transition duration-300 btn-primary">
+                        Book a Meeting
+                    </a>
+                </li>
+            </ul>
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobile-menu-button"
+                class="md:hidden text-gray-700 focus:outline-none focus:ring-2 focus:ring-databuddy-purple rounded-md p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 shadow-lg">
+            <ul class="flex flex-col items-center space-y-4">
+                <li><a href="#home"
+                        class="text-gray-700 hover:text-databuddy-purple font-medium rounded-md transition duration-300">Home</a>
+                </li>
+                <li><a href="#services"
+                        class="text-gray-700 hover:text-databuddy-purple font-medium rounded-md transition duration-300">Services</a>
+                </li>
+                <li><a href="#your-advantage"
+                        class="text-gray-700 hover:text-databuddy-purple font-medium rounded-md transition duration-300">Your
+                        Advantage</a></li>
+                <li><a href="#my-story"
+                        class="text-gray-700 hover:text-databuddy-purple font-medium rounded-md transition duration-300">My
+                        Story</a></li>
+                <li><a href="#technical-expertise"
+                        class="text-gray-700 hover:text-databuddy-purple font-medium rounded-md transition duration-300">Technical
+                        Expertise</a></li>
+                <li><a href="#case-studies"
+                        class="text-gray-700 hover:text-databuddy-purple font-medium rounded-md transition duration-300">Case
+                        Studies</a></li>
+                <li><a href="#contact"
+                        class="text-gray-700 hover:text-databuddy-purple font-medium rounded-md transition duration-300">Contact</a>
+                </li>
+                <li>
+                    <a href="#calendly"
+                        class="bg-databuddy-purple text-white px-5 py-2 rounded-lg font-semibold shadow-md hover:opacity-90 transition duration-300 btn-primary">
+                        Book a Meeting
+                    </a>
+                </li>
+            </ul>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home-section">
-        <div class="container">
-            <h1>Unlock Your Data's True Potential. Drive <span class="highlight">5x ROI</span> for Your Business.</h1>
-            <p>DataBuddy LLC transforms your information into actionable insights that directly impact your bottom line.
-                We're your partner in data-driven growth.</p>
-            <div class="btn-group">
-                <a href="https://calendly.com/your-calendly-link" target="_blank" class="btn btn-primary">Schedule Your
-                    Free Strategy Session</a>
-                <a href="#services-section" class="btn btn-secondary">Learn More About Our Approach</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Problem/Solution Section -->
-    <section class="problem-solution" id="problem-solution-section">
-        <div class="container">
-            <h2>Are You Leaving Money on the Table?</h2>
-            <div class="content">
-                <p>Many businesses are sitting on a goldmine of data, yet struggle to translate it into tangible growth.
-                    Overwhelming data, lack of clear insights, and an inability to connect information directly to
-                    revenue are common hurdles.</p>
-                <p>At DataBuddy LLC, we specialize in parsing that information to influence your bottom line. We turn
-                    raw data into your most valuable asset, ensuring every insight directly contributes to your profit.
+    <main>
+        <!-- Hero Section -->
+        <section id="home"
+            class="relative bg-black text-white py-20 md:py-32 overflow-hidden rounded-bl-[100px] rounded-br-[100px] shadow-lg">
+            <div class="absolute inset-0 opacity-20 bg-gradient-to-br from-databuddy-purple to-gray-800"></div>
+            <div class="container mx-auto px-4 relative z-10 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-up">
+                    Capitalize On Your Business's Data
+                </h1>
+                <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-90 animate-fade-in-up delay-200">
+                    DataBuddy helps SMBs with $1M revenue turn complex information into simple, profitable action. We're
+                    your "Data Buddy" - an approachable partner who champions your success, cuts through the hype, and
+                    translates information into real-world results.
                 </p>
+                <a href="#calendly"
+                    class="bg-databuddy-purple text-white px-8 py-4 rounded-full text-lg font-semibold shadow-xl hover:scale-105 transition-all duration-300 btn-primary animate-fade-in-up delay-400">
+                    Schedule Your Free Assessment
+                </a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Why DataBuddy Section -->
-    <section class="why-databuddy" id="about-section">
-        <div class="container">
-            <h2>Why Partner with DataBuddy LLC?</h2>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <h3>Outcome-Oriented</h3>
-                    <p>We're not tied to specific tools or processes; our sole focus is delivering measurable results
-                        and a **5x return** on your investment. Your success is our metric.</p>
-                </div>
-                <div class="feature-item">
-                    <h3>Bottom-Line Impact</h3>
-                    <p>We specialize in translating complex data into clear, actionable strategies that directly boost
-                        your revenue, optimize operations, and enhance your efficiency.</p>
-                </div>
-                <div class="feature-item">
-                    <h3>Experienced Leadership</h3>
-                    <p>Benefit from insights honed at industry leaders like LinkedIn, Snowflake, and TripAdvisor. We
-                        bring enterprise-level expertise to your SMB.</p>
-                </div>
-                <div class="feature-item">
-                    <h3>Tailored for SMBs</h3>
-                    <p>Our solutions are designed specifically for businesses with revenue over $1M, addressing your
-                        unique challenges and opportunities with precision.</p>
+        <!-- Services Section - Business Problems -->
+        <section id="services" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+                    Solving Your Toughest Business Problems. Not Just Data.
+                </h2>
+                <p class="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto mb-12">
+                    Business owners want results. We translate your data into actionable strategies that directly
+                    address your core challenges, helping you achieve more profits, more time, and less stress.
+                </p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div
+                        class="bg-gray-50 p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+                        <div class="flex justify-center items-center mb-4">
+                            <!-- Icon Placeholder - Example: Trending Up for Increased Sales -->
+                            <svg class="w-12 h-12 text-databuddy-purple" fill="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16 6l2.29 2.29-4.88 4.88-3.29-3.29-7.29 7.29 1.41 1.41 5.88-5.88 3.29 3.29 6.3-6.29L22 12V6h-6z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Increased Sales & Customer Acquisition</h3>
+                        <p class="text-gray-600">
+                            We analyze your customer data and sales funnels to identify hidden opportunities, optimize
+                            marketing spend, and pinpoint pathways to attract more ideal customers, **directly impacting
+                            your revenue and freeing up budget.**
+                        </p>
+                    </div>
+                    <div
+                        class="bg-gray-50 p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+                        <div class="flex justify-center items-center mb-4">
+                            <!-- Icon Placeholder - Example: Money for Profits/Margins -->
+                            <svg class="w-12 h-12 text-databuddy-purple" fill="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93s3.05-7.44 7-7.93v15.86zM12 4.07c3.95.49 7 3.85 7 7.93s-3.05 7.44-7 7.93V4.07z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Boosted Profits & Improved Margins</h3>
+                        <p class="text-gray-600">
+                            By scrutinizing operational costs, pricing strategies, and product profitability, we reveal
+                            where to cut expenses and maximize revenue from existing streams, **putting more cash
+                            directly into your business.**
+                        </p>
+                    </div>
+                    <div
+                        class="bg-gray-50 p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+                        <div class="flex justify-center items-center mb-4">
+                            <!-- Icon Placeholder - Example: Clock for More Time/Efficiency -->
+                            <svg class="w-12 h-12 text-databuddy-purple" fill="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm.01 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm-.5-13h1V7h-1zm.5 10c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Reclaim Your Time & Reduce Stress</h3>
+                        <p class="text-gray-600">
+                            Automate routine reporting, build intuitive dashboards, and establish data processes that
+                            free you from manual data wrangling, **giving you back valuable time and significantly
+                            reducing operational stress.**
+                        </p>
+                    </div>
+                    <div
+                        class="bg-gray-50 p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+                        <div class="flex justify-center items-center mb-4">
+                            <!-- Icon Placeholder - Example: Globe for Expansion -->
+                            <svg class="w-12 h-12 text-databuddy-purple" fill="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM12 4a8 8 0 018 8c0 4.41-3.59 8-8 8s-8-3.59-8-8a8 8 0 018-8zm-1 2H9.25C9.69 4.8 10.74 4 12 4c.66 0 1.29.13 1.88.37L11 6z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Strategize for Market Expansion & New
+                            Offerings</h3>
+                        <p class="text-gray-600">
+                            Leverage market data and internal performance metrics to identify viable new markets or
+                            product lines, minimizing risk and maximizing growth potential, **leading to sustained
+                            revenue streams.**
+                        </p>
+                    </div>
+                    <div
+                        class="bg-gray-50 p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+                        <div class="flex justify-center items-center mb-4">
+                            <!-- Icon Placeholder - Example: Handshake for Hand-off/Integration -->
+                            <svg class="w-12 h-12 text-databuddy-purple" fill="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 11c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Prepare for Growth, Hand-off, or Exit</h3>
+                        <p class="text-gray-600">
+                            Establish robust reporting and clear data governance to create a solid foundation for rapid
+                            growth, smooth transitions, or increased valuation for a future exit, **securing your
+                            investment and reducing future headaches.**
+                        </p>
+                    </div>
+                    <div
+                        class="bg-gray-50 p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+                        <div class="flex justify-center items-center mb-4">
+                            <!-- Icon Placeholder - Example: Chart for Financial/Strategic Support -->
+                            <svg class="w-12 h-12 text-databuddy-purple" fill="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93s3.05-7.44 7-7.93v15.86zM12 4.07c3.95.49 7 3.85 7 7.93s-3.05 7.44-7 7.93V4.07z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Strategic Insights for Key Leaders</h3>
+                        <p class="text-gray-600">
+                            Provide data-driven clarity for CFOs, CMOs, and Integrators, enabling precise forecasting,
+                            optimized marketing, and seamless system integration, **leading to more confident decisions
+                            and less guesswork.**
+                        </p>
+                    </div>
                 </div>
             </div>
-            <p style="margin-top: 50px;"><a href="#case-studies-section" class="btn btn-secondary">See Our Impact</a>
-            </p>
-        </div>
-    </section>
+        </section>
 
-    <!-- Newsletter Signup Section -->
-    <section class="newsletter">
-        <div class="container">
-            <h2>Stay Ahead with Data-Driven Insights</h2>
-            <p>Join our newsletter for exclusive tips, industry trends, and strategies to maximize your data's
-                potential.</p>
-            <!-- Replace with your actual newsletter signup form code (e.g., Mailchimp embed) -->
-            <form class="newsletter-form" action="YOUR_NEWSLETTER_FORM_ACTION_URL" method="post" target="_blank">
-                <input type="email" name="email" placeholder="Enter your email address" required
-                    aria-label="Email for newsletter signup">
-                <button type="submit">Subscribe</button>
-            </form>
-            <p style="font-size: 0.8em; margin-top: 20px; opacity: 0.8;">We respect your privacy. Unsubscribe at any
-                time.</p>
-        </div>
-    </section>
+        <!-- New Combined Section: Your Data, Your Advantage -->
+        <section id="your-advantage" class="py-16 md:py-24 bg-gray-100">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+                    Your Data, Your Advantage: The DataBuddy Philosophy
+                </h2>
+                <div class="max-w-4xl mx-auto mb-12 text-lg text-gray-700 leading-relaxed space-y-6">
+                    <p>
+                        Every company runs on information - from financial reports and product data to operations
+                        manuals, customer contracts, and sales figures. Our specialty isn't just building dashboards
+                        from clean numbers. We excel at parsing all of it to uncover hidden insights that <strong
+                            class="font-semibold text-gray-800">directly influence your bottom line</strong>.
+                    </p>
+                    <p>
+                        We are relentlessly outcome-oriented. We only take on projects where we can deliver a minimum
+                        of <strong class="font-semibold text-gray-800">5 times your investment back</strong>. This isn't
+                        just a goal; it's the core of how we operate, ensuring maximum value and minimal guesswork for
+                        you.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
+                    <div
+                        class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                        <h3 class="text-xl font-semibold text-databuddy-purple mb-4">Substance Over Hype</h3>
+                        <p class="text-gray-600">
+                            We focus on what actually works, not just what's new and exciting. You won't get a pitch for
+                            the latest AI trend if a simple, robust solution will do the job better. Our commitment is
+                            to find the most direct path to solve your business problems and deliver a meaningful
+                            impact.
+                        </p>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                        <h3 class="text-xl font-semibold text-databuddy-purple mb-4">Your Business, Our Mission</h3>
+                        <p class="text-gray-600">
+                            We treat your business as our own because our success is tied to yours. Every decision is
+                            made as if our own money and legacy were on the line. We're not here for a quick paycheck;
+                            our engagement is structured so that if we don't deliver, we don't get paid. We are true
+                            partners, invested in the high-ROI results we'd demand for ourselves.
+                        </p>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+                        <h3 class="text-xl font-semibold text-databuddy-purple mb-4">The Strategist & The Builder</h3>
+                        <p class="text-gray-600">
+                            Benefit from a rare combination of experience. We bring cutting-edge insights from years at
+                            tech leaders like LinkedIn & Snowflake, paired with the practical perspective of an SMB
+                            owner. We don't just hand you a PowerPoint or a dashboard; we bridge the gap—understanding
+                            your business with an owner's empathy and then personally building the expert technical
+                            solution required to drive real results.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Story & Philosophy -->
+        <section id="my-story" class="py-16 md:py-24 bg-gray-100">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+                    Our Approach: From Complexity to Clarity
+                </h2>
+                <p class="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto mb-10">
+                    What is DataBuddy? At its core, it's a different way of thinking about data. We believe the goal
+                    isn't to sell you complex tools, but to provide the clearest path to your business objectives. To
+                    explain our philosophy, here are a couple of analogies our clients find helpful.
+                </p>
+
+                <div class="max-w-4xl mx-auto text-left space-y-12 mt-12">
+                    <h3 class="text-2xl font-bold text-databuddy-purple mb-4">The "Knee Pain" Analogy: Focusing on the
+                        Real Goal</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Imagine you want to run a marathon, but you have knee pain. You see a doctor for a diagnosis, a
+                        physical therapist for exercises, and a pharmacist for medication. Each is an expert, but no one
+                        is focused on your actual goal: running the marathon. You're left to piece together their
+                        advice, hoping it all works.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        <strong>This is how most businesses approach data.</strong> You're sold a dashboard tool, a
+                        cloud platform, and a consulting workshop—each a separate solution. DataBuddy acts as your
+                        performance coach. We start with your business goal—the marathon—and build a single, cohesive
+                        strategy to get you there, managing all the specialists so you can focus on the finish line.
+                    </p>
+
+                    <h3 class="text-2xl font-bold text-databuddy-purple mb-4">The "Financial Overwhelm" Analogy: Your
+                        Trusted Advisor</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Think about managing your business's finances. You're an expert in your industry, but you're not
+                        a tax accountant or a corporate lawyer. You know you need to optimize for growth and
+                        profitability, but you don't know who to trust or what questions to ask. You're wary of
+                        advisors with hidden fees or their own agendas.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        <strong>DataBuddy is your trusted advisor, but for your data.</strong> We speak your
+                        language—the language of business outcomes. We demystify the technical landscape, evaluate
+                        options with your best interest at heart, and build a strategy that aligns with your long-term
+                        goals, ensuring you never overspend on technology you don't need. We are your "data buddy," your
+                        teammate in the system.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Expertise -->
+        <section id="technical-expertise" class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+                    Technical Expertise: Powering Your Data Infrastructure
+                </h2>
+                <p class="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto mb-12">
+                    Beyond business problems, we also provide the deep technical capabilities to build, optimize, and
+                    manage the data systems that drive your success.
+                </p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <div
+                        class="bg-white p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+                        <div class="flex justify-center items-center mb-4">
+                            <!-- Icon Placeholder - Example: Analysis -->
+                            <svg class="w-12 h-12 text-databuddy-purple" fill="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93s3.05-7.44 7-7.93v15.86zM12 4.07c3.95.49 7 3.85 7 7.93s-3.05 7.44-7 7.93V4.07z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Strategic Data Consulting</h3>
+                        <p class="text-gray-600">
+                            Develop clear, data-driven strategies for your business goals, including infrastructure
+                            design, optimal tool selection, advanced data analysis, and effective team hiring.
+                        </p>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+                        <div class="flex justify-center items-center mb-4">
+                            <!-- Icon Placeholder - Example: Lightbulb for AI/Ideas -->
+                            <svg class="w-12 h-12 text-databuddy-purple" fill="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9 22c1.1 0 2-.9 2-2h2c0 2.21-1.79 4-4 4s-4-1.79-4-4v-1h2v1c0 1.1.9 2 2 2zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-8h2V7h-2v5z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">AI & Data Strategy and Leadership</h3>
+                        <p class="text-gray-600">
+                            Navigate the complex AI landscape with clarity. We provide the strategic guidance and
+                            leadership to integrate AI effectively, even if you're just starting out.
+                        </p>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+                        <div class="flex justify-center items-center mb-4">
+                            <!-- Icon Placeholder - Example: Magnifying glass for Decision Scientist -->
+                            <svg class="w-12 h-12 text-databuddy-purple" fill="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0017 10c0-3.59-2.91-6.5-6.5-6.5S4 6.41 4 10s2.91 6.5 6.5 6.5c1.61 0 3.09-.64 4.2-1.6l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Decision Scientist</h3>
+                        <p class="text-gray-600">
+                            Transform intuition into insight. We help you embed scientific, data-backed processes into
+                            your decision-making, leading to more predictable and profitable outcomes.
+                        </p>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+                        <div class="flex justify-center items-center mb-4">
+                            <!-- Icon Placeholder - Example: Layers for Systems Architect -->
+                            <svg class="w-12 h-12 text-databuddy-purple" fill="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Systems Architect</h3>
+                        <p class="text-gray-600">
+                            Inherited a complex data system you don't trust, or ready to upgrade what's holding you
+                            back? We simplify and redesign your data systems for optimal performance, reduced cost, and
+                            intuitive usability.
+                        </p>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+                        <div class="flex justify-center items-center mb-4">
+                            <!-- Icon Placeholder - Example: User Check for Fractional Data Lead -->
+                            <svg class="w-12 h-12 text-databuddy-purple" fill="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93s3.05-7.44 7-7.93v15.86zM12 4.07c3.95.49 7 3.85 7 7.93s-3.05 7.44-7 7.93V4.07z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Fractional Data Lead</h3>
+                        <p class="text-gray-600">
+                            Need your first strategic data hire? We'll get you quick wins, build a solid data
+                            foundation, and even help you recruit a full-time team to ensure seamless transition and
+                            continued growth.
+                        </p>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+                        <div class="flex justify-center items-center mb-4">
+                            <!-- Icon Placeholder - Example: Gear for Automation -->
+                            <svg class="w-12 h-12 text-databuddy-purple" fill="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19.41 12.91c-.01-1.07-.3-2.09-.84-3.01L15.34 7l-.88-.88c-1.17-1.17-3.07-1.17-4.24 0l-.88-.88L7 4.59l-2.29-2.29c-.39-.39-1.02-.39-1.41 0s-.39 1.02 0 1.41L5.59 6l-2.29 2.29c-.39.39-.39 1.02 0 1.41s1.02.39 1.41 0L7 8.41l.88.88c1.17 1.17 3.07 1.17 4.24 0l.88.88L16.41 12l2.29 2.29c.39.39 1.02.39 1.41 0s-.39-1.02 0-1.41L19.41 12.91zM18 13.04l-1.63 1.63 1.05 1.05 1.63-1.63c.39-.39 1.02-.39 1.41 0s.39 1.02 0 1.41l-2.29 2.29c-.39.39-1.02.39-1.41 0s-.39-1.02 0-1.41l1.63-1.63-1.05-1.05c-.39-.39-1.02-.39-1.41 0s-.39 1.02 0 1.41l2.29 2.29c.39.39 1.02.39 1.41 0s-.39-1.02 0-1.41l-1.63-1.63 1.05-1.05c.39-.39 1.02-.39 1.41 0s.39 1.02 0 1.41l-2.29 2.29c-.39.39-1.02.39-1.41 0s-.39-1.02 0-1.41z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Data Automation</h3>
+                        <p class="text-gray-600">
+                            Eliminate manual tasks and streamline workflows. We build robust automation solutions that
+                            speed up processes, increase reliability, and free your team for strategic work.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies Section -->
+        <section id="case-studies" class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+                    Proven Impact. Real Results.
+                </h2>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    My career has focused on using data to drive tangible business outcomes. At tech giants, I
+                    contributed to teams that created significant value: at <strong>LinkedIn</strong>, I helped
+                    build the data infrastructure that supported its rapid growth, both pre- and post-acquisition by
+                    Microsoft; at
+                    <strong>TripAdvisor (FlipKey)</strong>, I focused on initiatives that directly improved
+                    revenue; and at <strong>Snowflake</strong>, I was part of the pre-IPO team that shaped
+                    the go-to-market data culture, contributing to one of the largest software IPOs in history.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    This experience honed my expertise in two critical areas:
+                </p>
+                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
+                    <li><strong>Bridging the gap between executive vision and technical execution</strong> by
+                        translating complex business needs into clear, data-driven strategies.
+                    </li>
+                    <li><strong>Cutting through complexity</strong> by untangling overgrown technical systems and
+                        building the streamlined, scalable data foundations that accelerate growth.</li>
+                </ul>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Today, I channel this enterprise-level experience through my own ventures. As the founder of
+                    <strong>DataBuddy LLC</strong>, I apply these principles to help SMBs achieve transformative
+                    results. Through <strong>MetricDrive</strong>, my business acquisition firm, I evaluate and
+                    partner with companies, understanding value from an owner's perspective. This dual experience
+                    ensures I provide solutions that are not only technically brilliant but also practical,
+                    profitable, and grounded in real-world business reality. The discipline and focus required come
+                    naturally, honed over years as a D1 athlete and now as an Ironman competitor in my spare time.
+                </p>
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div
+                        class="bg-white p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+                        <h3 class="text-xl font-semibold text-databuddy-purple mb-4">Case Study 1: [Industry]</h3>
+                        <p class="text-gray-600 mb-4">
+                            <span class="font-bold">Challenge:</span> Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit.
+                        </p>
+                        <p class="text-gray-600 mb-4">
+                            <span class="font-bold">Solution:</span> Ut enim ad minim veniam, quis nostrud exercitation
+                            ullamco laboris.
+                        </p>
+                        <p class="text-gray-600 font-bold text-lg">
+                            <span class="text-databuddy-purple">Result:</span> Achieved [Specific Metric] increase and
+                            [X]% cost reduction.
+                        </p>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+                        <h3 class="text-xl font-semibold text-databuddy-purple mb-4">Case Study 2: [Industry]</h3>
+                        <p class="text-gray-600 mb-4">
+                            <span class="font-bold">Challenge:</span> Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum.
+                        </p>
+                        <p class="text-gray-600 mb-4">
+                            <span class="font-bold">Solution:</span> Excepteur sint occaecat cupidatat non proident,
+                            sunt in culpa.
+                        </p>
+                        <p class="text-gray-600 font-bold text-lg">
+                            <span class="text-databuddy-purple">Result:</span> Boosted [Key Metric] by [Y]% and
+                            streamlined operations.
+                        </p>
+                    </div>
+                </div>
+                <div class="mt-12">
+                    <p class="text-lg text-gray-700 mb-6">
+                        Want to learn more about how we can help your business?
+                    </p>
+                    <a href="#calendly"
+                        class="bg-databuddy-purple text-white px-8 py-4 rounded-full text-lg font-semibold shadow-xl hover:scale-105 transition-all duration-300 btn-primary">
+                        Discuss Your Business Needs
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calendly Section -->
+        <section id="calendly" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+                    Book Your Free Consultation
+                </h2>
+                <p class="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto mb-10">
+                    Ready to see how DataBuddy LLC can deliver 5x ROI for your business? Schedule a convenient time
+                    below.
+                </p>
+                <div class="max-w-4xl mx-auto calendly-container shadow-xl border border-gray-200">
+                    <!-- Calendly inline widget begin -->
+                    <iframe src="https://calendly.com/michaeladavis10/30-min-meeting" frameborder="0"></iframe>
+                    <!-- Calendly inline widget end -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 md:py-24 bg-gray-50 rounded-tl-[100px] rounded-tr-[100px] shadow-lg">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+                    Get in Touch
+                </h2>
+                <p class="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto mb-10">
+                    Have a specific question or want to explore possibilities? Send us a message, and we'll get back to
+                    you promptly.
+                </p>
+                <div class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-xl border border-gray-200">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-left text-sm font-medium text-gray-700 mb-1">Your
+                                Name</label>
+                            <input type="text" id="name" name="name" required
+                                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-databuddy-purple focus:border-databuddy-purple sm:text-sm">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-left text-sm font-medium text-gray-700 mb-1">Your
+                                Email</label>
+                            <input type="email" id="email" name="email" required
+                                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-databuddy-purple focus:border-databuddy-purple sm:text-sm">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-left text-sm font-medium text-gray-700 mb-1">Your
+                                Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-databuddy-purple focus:border-databuddy-purple sm:text-sm"></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-databuddy-purple text-white py-3 rounded-lg font-semibold shadow-md hover:opacity-90 transition duration-300 btn-primary">
+                            Send Message
+                        </button>
+                    </form>
+                    <div id="success-message" class="success-message">
+                        Thank you for your message! We'll be in touch soon.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <a href="#" class="logo">DataBuddy LLC</a>
-            <ul class="footer-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#services-section">Services</a></li>
-                <li><a href="#about-section">About Us</a></li>
-                <li><a href="#case-studies-section">Our Impact</a></li>
-                <li><a href="#contact-section">Contact</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-            </ul>
-            <div class="social-icons">
-                <!-- Replace with actual social media links and icons (e.g., Font Awesome) -->
-                <a href="#" class="social-icon" aria-label="LinkedIn"><img
-                        src="https://placehold.co/24x24/FFFFFF/000000?text=IN" alt="LinkedIn"></a>
-                <a href="#" class="social-icon" aria-label="Twitter"><img
-                        src="https://placehold.co/24x24/FFFFFF/000000?text=X" alt="Twitter"></a>
+    <footer class="bg-black text-gray-400 py-10 md:py-12">
+        <div class="container mx-auto px-4 text-center">
+            <div class="text-2xl font-bold text-white mb-4">
+                <a href="/" class="flex items-center justify-center">
+                    <img src="assets/DataBuddy logo color RGB.png" alt="DataBuddy LLC Logo" class="h-10 w-auto mr-2">
+                    <span class="text-databuddy-purple">DataBuddy</span> LLC
+                </a>
             </div>
-            <p>&copy; <span id="current-year"></span> DataBuddy LLC. All rights reserved.</p>
+            <p class="mb-4">
+                Driving Data-Driven Results for SMBs.
+            </p>
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#home" class="link-hover transition duration-300">Home</a>
+                <a href="#services" class="link-hover transition duration-300">Services</a>
+                <a href="#your-advantage" class="link-hover transition duration-300">Your Advantage</a>
+                <a href="#my-story" class="link-hover transition duration-300">My Story</a>
+                <a href="#technical-expertise" class="link-hover transition duration-300">Technical Expertise</a>
+                <a href="#contact" class="link-hover transition duration-300">Contact</a>
+            </div>
+            <p class="text-sm">
+                &copy; 2025 DataBuddy LLC. All rights reserved.
+            </p>
         </div>
     </footer>
 
@@ -686,50 +710,45 @@
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
-                // Close mobile nav if open
-                if (document.querySelector('.nav-menu').classList.contains('active')) {
-                    document.querySelector('.nav-menu').classList.remove('active');
+                // Close mobile menu if open
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
                 }
             });
         });
 
-        // Toggle mobile navigation
-        document.querySelector('.nav-toggle').addEventListener('click', function () {
-            document.querySelector('.nav-menu').classList.toggle('active');
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
 
-        // Set current year in footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+        // Simple form submission handler (client-side only for this static site)
+        const contactForm = document.getElementById('contact-form');
+        const successMessage = document.getElementById('success-message');
 
-        // Placeholder for newsletter form submission (if you decide to handle it via AJAX or a serverless function)
-        // For static GitHub Pages, you'll typically use a service like Formspree or Netlify Forms
-        // Example with Formspree (replace YOUR_NEWSLETTER_FORM_ACTION_URL with your Formspree endpoint)
-        // const newsletterForm = document.querySelector('.newsletter-form');
-        // newsletterForm.addEventListener('submit', async function(e) {
-        //     e.preventDefault();
-        //     const formData = new FormData(newsletterForm);
-        //     try {
-        //         const response = await fetch(newsletterForm.action, {
-        //             method: newsletterForm.method,
-        //             body: formData,
-        //             headers: {
-        //                 'Accept': 'application/json'
-        //             }
-        //         });
-        //         if (response.ok) {
-        //             alert('Thank you for subscribing!'); // Replace with custom message box
-        //             newsletterForm.reset();
-        //         } else {
-        //             alert('There was an error subscribing. Please try again.'); // Replace with custom message box
-        //         }
-        //     } catch (error) {
-        //         console.error('Error submitting form:', error);
-        //         alert('There was an error subscribing. Please try again.'); // Replace with custom message box
-        //     }
-        // });
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent actual form submission
+
+            // In a real scenario, you'd send this data to a backend (e.g., Netlify Forms, Formspree, custom API)
+            console.log('Form submitted (client-side only):');
+            console.log('Name:', document.getElementById('name').value);
+            console.log('Email:', document.getElementById('email').value);
+            console.log('Message:', document.getElementById('message').value);
+
+            // Display success message and clear form
+            contactForm.reset();
+            successMessage.style.display = 'block';
+
+            // Hide success message after a few seconds
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 5000);
+        });
     </script>
-    <!-- Font Awesome for icons (optional, uncomment and use if desired) -->
-    <!-- <script src="https://kit.fontawesome.com/your-font-awesome-kit-code.js" crossorigin="anonymous"></script> -->
 </body>
 
 </html>
