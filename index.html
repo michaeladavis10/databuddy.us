@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataBuddy LLC - Unlock Your Data's True Potential</title>
+    <meta name="description"
+        content="DataBuddy LLC offers outcome-oriented data consulting for SMBs (> $1M revenue), delivering 5x ROI by transforming information into actionable insights.">
+    <meta name="keywords"
+        content="data consulting, SMB data, business intelligence, data strategy, data analytics, ROI, DataBuddy LLC">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        :root {
+            --primary-color: #6350ec;
+            --text-dark: #333333;
+            --text-light: #f0f0f0;
+            --background-light: #ffffff;
+            --background-gray: #f8f8f8;
+            --background-dark: #1a1a1a;
+            --white: #ffffff;
+            --black: #000000;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--background-light);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--black);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+        }
+
+        /* Responsive adjustment below */
+        h2 {
+            font-size: 2.5em;
+        }
+
+        /* Responsive adjustment below */
+        h3 {
+            font-size: 2em;
+        }
+
+        p {
+            margin-bottom: 1em;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 10px;
+            /* Rounded corners */
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(99, 80, 236, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: #4e3ae1;
+            /* Slightly darker primary */
+            box-shadow: 0 6px 20px rgba(99, 80, 236, 0.4);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* Header */
+        .header {
+            background-color: var(--white);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            /* Allow wrapping for mobile */
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            padding: 5px 0;
+            /* Adjust padding for better spacing */
+        }
+
+        .logo-img {
+            max-height: 40px;
+            /* Adjust as needed */
+            width: auto;
+        }
+
+        .nav-menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 30px;
+            /* Space between nav items */
+        }
+
+        .nav-menu li a {
+            color: var(--black);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 0;
+            position: relative;
+        }
+
+        .nav-menu li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            left: 0;
+            bottom: -5px;
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu li a:hover::after {
+            width: 100%;
+        }
+
+        .nav-menu li a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-toggle {
+            display: none;
+            /* Hidden on desktop */
+            font-size: 2em;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--black);
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--background-light);
+            text-align: center;
+            padding: 100px 0;
+            display: flex;
+            align-items: center;
+            min-height: 70vh;
+            /* Make it take up a good portion of the viewport */
+        }
+
+        .hero h1 {
+            font-size: 3.8em;
+            font-weight: 700;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            color: var(--black);
+        }
+
+        .hero h1 .highlight {
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            max-width: 800px;
+            margin: 20px auto 40px auto;
+            color: var(--text-dark);
+        }
+
+        .hero .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Problem/Solution Section */
+        .problem-solution {
+            background-color: var(--background-gray);
+            text-align: center;
+        }
+
+        .problem-solution h2 {
+            font-size: 2.8em;
+            color: var(--black);
+            margin-bottom: 40px;
+        }
+
+        .problem-solution .content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1em;
+            color: var(--text-dark);
+        }
+
+        /* Why DataBuddy Section */
+        .why-databuddy {
+            background-color: var(--white);
+            text-align: center;
+        }
+
+        .why-databuddy h2 {
+            font-size: 2.8em;
+            color: var(--black);
+            margin-bottom: 50px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            text-align: left;
+        }
+
+        .feature-item {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background-color: var(--primary-color);
+            transition: height 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-item h3 {
+            color: var(--primary-color);
+            font-size: 1.6em;
+            margin-bottom: 15px;
+            padding-top: 10px;
+            /* Space for the top bar */
+        }
+
+        .feature-item p {
+            color: var(--text-dark);
+            font-size: 1em;
+        }
+
+        /* Newsletter Section */
+        .newsletter {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .newsletter h2 {
+            color: var(--white);
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .newsletter p {
+            font-size: 1.1em;
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+        }
+
+        .newsletter-form {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input[type="email"] {
+            flex-grow: 1;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1em;
+            max-width: 400px;
+        }
+
+        .newsletter-form button {
+            background-color: var(--black);
+            color: var(--white);
+            border: none;
+            padding: 14px 28px;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            background-color: #444;
+            /* Darker black */
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--background-dark);
+            color: var(--text-light);
+            padding: 60px 0;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        .footer .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .footer .logo {
+            font-size: 1.5em;
+            color: var(--white);
+        }
+
+        .footer-nav {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .footer-nav li a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-nav li a:hover {
+            color: var(--primary-color);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-icon {
+            color: var(--text-light);
+            font-size: 1.5em;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-icon:hover {
+            color: var(--primary-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 3em;
+            }
+
+            .hero p {
+                font-size: 1.1em;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .nav-menu {
+                gap: 20px;
+            }
+
+            .feature-item {
+                padding: 25px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header .container {
+                flex-direction: column;
+                align-items: flex-start;
+                /* Align logo left */
+            }
+
+            .nav-toggle {
+                display: block;
+                position: absolute;
+                top: 25px;
+                right: 20px;
+            }
+
+            .nav-menu {
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                display: none;
+                /* Hidden by default for mobile */
+                margin-top: 20px;
+                gap: 10px;
+            }
+
+            .nav-menu.active {
+                display: flex;
+                /* Show when active */
+            }
+
+            .nav-menu li a {
+                padding: 10px 0;
+                display: block;
+            }
+
+            .btn-header {
+                display: none;
+                /* Hide header button on mobile nav */
+            }
+
+            .hero {
+                padding: 80px 20px;
+            }
+
+            .hero h1 {
+                font-size: 2.5em;
+            }
+
+            .hero p {
+                font-size: 1em;
+            }
+
+            .hero .btn-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .newsletter-form input[type="email"],
+            .newsletter-form button {
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .problem-solution h2,
+            .why-databuddy h2 {
+                font-size: 2em;
+            }
+
+            .footer-nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 0.9em;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+
+            section {
+                padding: 50px 0;
+            }
+
+            .feature-item h3 {
+                font-size: 1.4em;
+            }
+
+            .newsletter h2 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <!-- Placeholder for your DataBuddy LLC logo image -->
+                <!-- Ideally, you'd host this image on GitHub Pages too (e.g., /assets/logo.png) -->
+                <!-- <img src="assets/databuddy-logo.png" alt="DataBuddy LLC Logo" class="logo-img"> -->
+                DataBuddy LLC
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#services-section">Services</a></li>
+                    <li><a href="#about-section">About Us</a></li>
+                    <li><a href="#case-studies-section">Our Impact</a></li>
+                    <li><a href="#contact-section">Contact</a></li>
+                    <li><a href="https://calendly.com/your-calendly-link" target="_blank"
+                            class="btn btn-primary btn-header">Book a Free Consultation</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home-section">
+        <div class="container">
+            <h1>Unlock Your Data's True Potential. Drive <span class="highlight">5x ROI</span> for Your Business.</h1>
+            <p>DataBuddy LLC transforms your information into actionable insights that directly impact your bottom line.
+                We're your partner in data-driven growth.</p>
+            <div class="btn-group">
+                <a href="https://calendly.com/your-calendly-link" target="_blank" class="btn btn-primary">Schedule Your
+                    Free Strategy Session</a>
+                <a href="#services-section" class="btn btn-secondary">Learn More About Our Approach</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem/Solution Section -->
+    <section class="problem-solution" id="problem-solution-section">
+        <div class="container">
+            <h2>Are You Leaving Money on the Table?</h2>
+            <div class="content">
+                <p>Many businesses are sitting on a goldmine of data, yet struggle to translate it into tangible growth.
+                    Overwhelming data, lack of clear insights, and an inability to connect information directly to
+                    revenue are common hurdles.</p>
+                <p>At DataBuddy LLC, we specialize in parsing that information to influence your bottom line. We turn
+                    raw data into your most valuable asset, ensuring every insight directly contributes to your profit.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why DataBuddy Section -->
+    <section class="why-databuddy" id="about-section">
+        <div class="container">
+            <h2>Why Partner with DataBuddy LLC?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>Outcome-Oriented</h3>
+                    <p>We're not tied to specific tools or processes; our sole focus is delivering measurable results
+                        and a **5x return** on your investment. Your success is our metric.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Bottom-Line Impact</h3>
+                    <p>We specialize in translating complex data into clear, actionable strategies that directly boost
+                        your revenue, optimize operations, and enhance your efficiency.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Experienced Leadership</h3>
+                    <p>Benefit from insights honed at industry leaders like LinkedIn, Snowflake, and TripAdvisor. We
+                        bring enterprise-level expertise to your SMB.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Tailored for SMBs</h3>
+                    <p>Our solutions are designed specifically for businesses with revenue over $1M, addressing your
+                        unique challenges and opportunities with precision.</p>
+                </div>
+            </div>
+            <p style="margin-top: 50px;"><a href="#case-studies-section" class="btn btn-secondary">See Our Impact</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup Section -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Stay Ahead with Data-Driven Insights</h2>
+            <p>Join our newsletter for exclusive tips, industry trends, and strategies to maximize your data's
+                potential.</p>
+            <!-- Replace with your actual newsletter signup form code (e.g., Mailchimp embed) -->
+            <form class="newsletter-form" action="YOUR_NEWSLETTER_FORM_ACTION_URL" method="post" target="_blank">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                    aria-label="Email for newsletter signup">
+                <button type="submit">Subscribe</button>
+            </form>
+            <p style="font-size: 0.8em; margin-top: 20px; opacity: 0.8;">We respect your privacy. Unsubscribe at any
+                time.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <a href="#" class="logo">DataBuddy LLC</a>
+            <ul class="footer-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#services-section">Services</a></li>
+                <li><a href="#about-section">About Us</a></li>
+                <li><a href="#case-studies-section">Our Impact</a></li>
+                <li><a href="#contact-section">Contact</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+            <div class="social-icons">
+                <!-- Replace with actual social media links and icons (e.g., Font Awesome) -->
+                <a href="#" class="social-icon" aria-label="LinkedIn"><img
+                        src="https://placehold.co/24x24/FFFFFF/000000?text=IN" alt="LinkedIn"></a>
+                <a href="#" class="social-icon" aria-label="Twitter"><img
+                        src="https://placehold.co/24x24/FFFFFF/000000?text=X" alt="Twitter"></a>
+            </div>
+            <p>&copy; <span id="current-year"></span> DataBuddy LLC. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Close mobile nav if open
+                if (document.querySelector('.nav-menu').classList.contains('active')) {
+                    document.querySelector('.nav-menu').classList.remove('active');
+                }
+            });
+        });
+
+        // Toggle mobile navigation
+        document.querySelector('.nav-toggle').addEventListener('click', function () {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Placeholder for newsletter form submission (if you decide to handle it via AJAX or a serverless function)
+        // For static GitHub Pages, you'll typically use a service like Formspree or Netlify Forms
+        // Example with Formspree (replace YOUR_NEWSLETTER_FORM_ACTION_URL with your Formspree endpoint)
+        // const newsletterForm = document.querySelector('.newsletter-form');
+        // newsletterForm.addEventListener('submit', async function(e) {
+        //     e.preventDefault();
+        //     const formData = new FormData(newsletterForm);
+        //     try {
+        //         const response = await fetch(newsletterForm.action, {
+        //             method: newsletterForm.method,
+        //             body: formData,
+        //             headers: {
+        //                 'Accept': 'application/json'
+        //             }
+        //         });
+        //         if (response.ok) {
+        //             alert('Thank you for subscribing!'); // Replace with custom message box
+        //             newsletterForm.reset();
+        //         } else {
+        //             alert('There was an error subscribing. Please try again.'); // Replace with custom message box
+        //         }
+        //     } catch (error) {
+        //         console.error('Error submitting form:', error);
+        //         alert('There was an error subscribing. Please try again.'); // Replace with custom message box
+        //     }
+        // });
+    </script>
+    <!-- Font Awesome for icons (optional, uncomment and use if desired) -->
+    <!-- <script src="https://kit.fontawesome.com/your-font-awesome-kit-code.js" crossorigin="anonymous"></script> -->
+</body>
+
+</html>
