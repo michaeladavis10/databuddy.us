@@ -9,9 +9,7 @@
         content="DataBuddy LLC helps SMBs with over $1M revenue transform their information into actionable insights, guaranteeing a 5x return on investment. Specializing in outcome-oriented data consulting.">
     <meta name="keywords"
         content="data consulting, SMB, small business, enterprise, data analytics, business intelligence, ROI, return on investment, data strategy, LinkedIn, Snowflake, TripAdvisor, DataBuddy LLC">
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -89,13 +87,14 @@
 
 <body class="bg-white">
 
-    <!-- Header & Navigation -->
     <header class="bg-white shadow-sm py-4">
         <nav class="container mx-auto px-4 flex justify-between items-center">
             <div class="text-2xl font-bold text-gray-900">
-                <!-- DataBuddy LLC Logo -->
                 <a href="#home" class="flex items-center">
-                    <img src="assets/DataBuddy logo color RGB.png" alt="DataBuddy LLC Logo" class="h-10 w-auto mr-2">
+                    <img src="assets/DataBuddy logo color RGB.png"
+                        srcset="assets/DataBuddy logo color RGB-small.png 480w, assets/DataBuddy logo color RGB-medium.png 800w"
+                        sizes="(max-width: 600px) 480px, 800px" alt="DataBuddy LLC Logo" class="h-10 w-auto mr-2"
+                        loading="lazy">
                 </a>
             </div>
             <ul class="hidden md:flex space-x-6">
@@ -127,7 +126,6 @@
                     </a>
                 </li>
             </ul>
-            <!-- Mobile Menu Button (Hamburger) -->
             <button id="mobile-menu-toggle"
                 class="md:hidden text-gray-700 focus:outline-none focus:ring-2 focus:ring-databuddy-purple rounded-md p-2">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -137,7 +135,6 @@
                 </svg>
             </button>
         </nav>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white py-4 shadow-lg">
             <ul class="flex flex-col items-center space-y-4">
                 <li><a href="#home"
@@ -172,7 +169,6 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
         <section id="home"
             class="relative bg-black text-white py-20 md:py-32 overflow-hidden rounded-bl-[100px] rounded-br-[100px] shadow-lg">
             <div class="absolute inset-0 opacity-20 bg-gradient-to-br from-databuddy-purple to-gray-800"></div>
@@ -192,7 +188,6 @@
             </div>
         </section>
 
-        <!-- Services Section: Business Problems -->
         <section id="services" class="py-16 md:py-24 bg-white">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
@@ -206,7 +201,6 @@
                     <div
                         class="bg-gray-50 p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
                         <div class="flex justify-center items-center mb-4">
-                            <!-- Font Awesome Icon: Chart Line for Increased Sales & Customer Acquisition -->
                             <i class="fa-solid fa-chart-line fa-3x text-databuddy-purple"></i>
                         </div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-3">Increased Sales & Customer Acquisition</h3>
@@ -220,7 +214,6 @@
                     <div
                         class="bg-gray-50 p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
                         <div class="flex justify-center items-center mb-4">
-                            <!-- Font Awesome Icon: Dollar Sign for Boosted Profits & Improved Margins -->
                             <i class="fa-solid fa-dollar-sign fa-3x text-databuddy-purple"></i>
                         </div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-3">Boosted Profits & Improved Margins</h3>
@@ -234,7 +227,6 @@
                     <div
                         class="bg-gray-50 p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
                         <div class="flex justify-center items-center mb-4">
-                            <!-- Font Awesome Icon: Hourglass Half for Reclaim Your Time & Reduce Stress -->
                             <i class="fa-solid fa-hourglass-half fa-3x text-databuddy-purple"></i>
                         </div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-3">Reclaim Your Time & Reduce Stress</h3>
@@ -247,7 +239,6 @@
                     <div
                         class="bg-gray-50 p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
                         <div class="flex justify-center items-center mb-4">
-                            <!-- Font Awesome Icon: Earth Americas for Strategize for Market Expansion & New Offerings -->
                             <i class="fa-solid fa-earth-americas fa-3x text-databuddy-purple"></i>
                         </div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-3">Strategize for Market Expansion & New
@@ -261,7 +252,6 @@
                     <div
                         class="bg-gray-50 p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
                         <div class="flex justify-center items-center mb-4">
-                            <!-- Font Awesome Icon: Handshake Simple for Prepare for Growth, Hand-off, or Exit -->
                             <i class="fa-solid fa-handshake-simple fa-3x text-databuddy-purple"></i>
                         </div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-3">Prepare for Growth, Hand-off, or Exit</h3>
@@ -275,7 +265,6 @@
                     <div
                         class="bg-gray-50 p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
                         <div class="flex justify-center items-center mb-4">
-                            <!-- Font Awesome Icon: Chart Pie for Strategic Insights for Key Leaders -->
                             <i class="fa-solid fa-chart-pie fa-3x text-databuddy-purple"></i>
                         </div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-3">Strategic Insights for Key Leaders</h3>
@@ -290,7 +279,6 @@
             </div>
         </section>
 
-        <!-- Your Data, Your Advantage Section -->
         <section id="your-advantage" class="py-16 md:py-24 bg-gray-100">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
@@ -347,7 +335,6 @@
             </div>
         </section>
 
-        <!-- Our Approach Section -->
         <section id="our-approach" class="py-16 md:py-24 bg-gray-100">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
@@ -398,7 +385,6 @@
             </div>
         </section>
 
-        <!-- Technical Expertise Section -->
         <section id="technical-expertise" class="py-16 md:py-24 bg-gray-50">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
@@ -412,7 +398,6 @@
                     <div
                         class="bg-white p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
                         <div class="flex justify-center items-center mb-4">
-                            <!-- Font Awesome Icon: Brain for Strategic Data Consulting -->
                             <i class="fa-solid fa-brain fa-3x text-databuddy-purple"></i>
                         </div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-3">Strategic Data Consulting</h3>
@@ -424,7 +409,6 @@
                     <div
                         class="bg-white p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
                         <div class="flex justify-center items-center mb-4">
-                            <!-- Font Awesome Icon: Robot for AI & Data Strategy and Leadership -->
                             <i class="fa-solid fa-robot fa-3x text-databuddy-purple"></i>
                         </div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-3">AI & Data Strategy and Leadership</h3>
@@ -436,7 +420,6 @@
                     <div
                         class="bg-white p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
                         <div class="flex justify-center items-center mb-4">
-                            <!-- Font Awesome Icon: Lightbulb for Decision Scientist -->
                             <i class="fa-solid fa-lightbulb fa-3x text-databuddy-purple"></i>
                         </div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-3">Decision Scientist</h3>
@@ -448,7 +431,6 @@
                     <div
                         class="bg-white p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
                         <div class="flex justify-center items-center mb-4">
-                            <!-- Font Awesome Icon: Sitemaps for Systems Architect -->
                             <i class="fa-solid fa-sitemap fa-3x text-databuddy-purple"></i>
                         </div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-3">Systems Architect</h3>
@@ -461,7 +443,6 @@
                     <div
                         class="bg-white p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
                         <div class="flex justify-center items-center mb-4">
-                            <!-- Font Awesome Icon: Users Gear for Fractional Data Lead -->
                             <i class="fa-solid fa-users-gear fa-3x text-databuddy-purple"></i>
                         </div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-3">Fractional Data Lead</h3>
@@ -474,7 +455,6 @@
                     <div
                         class="bg-white p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
                         <div class="flex justify-center items-center mb-4">
-                            <!-- Font Awesome Icon: Gear for Data Automation -->
                             <i class="fa-solid fa-gear fa-3x text-databuddy-purple"></i>
                         </div>
                         <h3 class="text-xl font-semibold text-gray-900 mb-3">Data Automation</h3>
@@ -487,7 +467,6 @@
             </div>
         </section>
 
-        <!-- Case Studies Section -->
         <section id="case-studies" class="py-16 md:py-24 bg-gray-50">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
@@ -567,7 +546,6 @@
             </div>
         </section>
 
-        <!-- Calendly Section -->
         <section id="book-meeting" class="py-16 md:py-24 bg-white">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
@@ -578,14 +556,11 @@
                     below.
                 </p>
                 <div class="max-w-4xl mx-auto calendly-container shadow-xl border border-gray-200">
-                    <!-- Calendly inline widget begin -->
                     <iframe src="https://calendly.com/michaeladavis10/30-min-meeting" frameborder="0"></iframe>
-                    <!-- Calendly inline widget end -->
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact-us" class="py-16 md:py-24 bg-gray-50 rounded-tl-[100px] rounded-tr-[100px] shadow-lg">
             <div class="container mx-auto px-4 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
@@ -628,12 +603,14 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-black text-gray-400 py-10 md:py-12">
         <div class="container mx-auto px-4 text-center">
             <div class="text-2xl font-bold text-white mb-4">
                 <a href="#home" class="flex items-center justify-center">
-                    <img src="assets/DataBuddy logo color RGB.png" alt="DataBuddy LLC Logo" class="h-10 w-auto mr-2">
+                    <img src="assets/DataBuddy logo color RGB.png"
+                        srcset="assets/DataBuddy logo color RGB-small.png 480w, assets/DataBuddy logo color RGB-medium.png 800w"
+                        sizes="(max-width: 600px) 480px, 800px" alt="DataBuddy LLC Logo" class="h-10 w-auto mr-2"
+                        loading="lazy">
                     <span class="text-databuddy-purple">DataBuddy</span> LLC
                 </a>
             </div>
