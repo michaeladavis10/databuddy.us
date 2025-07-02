@@ -8,676 +8,218 @@
     <meta name="description"
         content="DataBuddy LLC helps SMBs with over $1M revenue transform their information into actionable insights, guaranteeing a 5x return on investment. Specializing in outcome-oriented data consulting.">
     <meta name="keywords"
-        content="data consulting, SMB, small business, enterprise, data analytics, business intelligence, ROI, return on investment, data strategy, LinkedIn, Snowflake, TripAdvisor, DataBuddy LLC">
-    <script src="https://cdn.tailwindcss.com"></script>
+        content="data consulting, SMB, small business, enterprise, data analytics, business intelligence, ROI, return on investment, data strategy, DataBuddy LLC">
+
+    <link rel="stylesheet" href="style.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        /* Custom styles for the Inter font and purple accent */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
-        body {
-            font-family: 'Inter', sans-serif;
-            color: #1a202c;
-            /* Default dark grey for text */
-        }
-
-        /* Custom purple color */
-        .bg-databuddy-purple {
-            background-color: #6350ec;
-        }
-
-        .text-databuddy-purple {
-            color: #6350ec;
-        }
-
-        .border-databuddy-purple {
-            border-color: #6350ec;
-        }
-
-        /* Style for interactive elements on hover/focus */
-        .btn-primary:hover {
-            opacity: 0.9;
-        }
-
-        .btn-primary:focus {
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(99, 80, 236, 0.5);
-            /* Focus ring */
-        }
-
-        .link-hover:hover {
-            color: #6350ec;
-            /* Purple on hover for links */
-        }
-
-        /* Responsive iframe for Calendly */
-        .calendly-container {
-            position: relative;
-            height: 600px;
-            /* Adjust height as needed */
-            overflow: hidden;
-            border-radius: 12px;
-        }
-
-        .calendly-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        /* Basic form success message styling */
-        .success-message {
-            display: none;
-            background-color: #d1fae5;
-            /* Green light background */
-            color: #065f46;
-            /* Dark green text */
-            padding: 1rem;
-            border-radius: 0.5rem;
-            margin-top: 1rem;
-            text-align: center;
-        }
-    </style>
 </head>
 
-<body class="bg-white">
+<body>
 
-    <header class="bg-white shadow-sm py-4">
-        <nav class="container mx-auto px-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-gray-900">
-                <a href="#home" class="flex items-center">
+    <header class="main-header">
+        <nav class="main-nav">
+            <div class="logo-container">
+                <a href="#home" class="logo-link">
                     <img src="assets/DataBuddy logo color RGB.png"
                         srcset="assets/DataBuddy logo color RGB-small.png 480w, assets/DataBuddy logo color RGB-medium.png 800w"
-                        sizes="(max-width: 600px) 480px, 800px" alt="DataBuddy LLC Logo" class="h-10 w-auto mr-2"
+                        sizes="(max-width: 600px) 480px, 800px" alt="DataBuddy LLC Logo" class="logo-image"
                         loading="lazy">
                 </a>
             </div>
-            <ul class="hidden md:flex space-x-6">
-                <li><a href="#home"
-                        class="text-gray-700 hover:text-databuddy-purple font-medium rounded-md transition duration-300">Home</a>
-                </li>
-                <li><a href="#services"
-                        class="text-gray-700 hover:text-databuddy-purple font-medium rounded-md transition duration-300">Services</a>
-                </li>
-                <li><a href="#your-advantage"
-                        class="text-gray-700 hover:text-databuddy-purple font-medium rounded-md transition duration-300">Your
-                        Advantage</a></li>
-                <li><a href="#our-approach"
-                        class="text-gray-700 hover:text-databuddy-purple font-medium rounded-md transition duration-300">Our
-                        Approach</a></li>
-                <li><a href="#technical-expertise"
-                        class="text-gray-700 hover:text-databuddy-purple font-medium rounded-md transition duration-300">Technical
-                        Expertise</a></li>
-                <li><a href="#case-studies"
-                        class="text-gray-700 hover:text-databuddy-purple font-medium rounded-md transition duration-300">Case
-                        Studies</a></li>
-                <li><a href="#contact-us"
-                        class="text-gray-700 hover:text-databuddy-purple font-medium rounded-md transition duration-300">Contact</a>
-                </li>
-                <li>
-                    <a href="#book-meeting"
-                        class="bg-databuddy-purple text-white px-5 py-2 rounded-lg font-semibold shadow-md hover:opacity-90 transition duration-300 btn-primary">
-                        Book a Meeting
-                    </a>
-                </li>
+            <ul class="desktop-nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#your-advantage" class="nav-link">Your Advantage</a></li>
+                <li><a href="#our-approach" class="nav-link">Our Approach</a></li>
+                <li><a href="#case-studies" class="nav-link">Case Studies</a></li>
+                <li><a href="#contact-us" class="nav-link">Contact</a></li>
+                <li><a href="#book-meeting" class="btn btn-primary-nav">Book a Meeting</a></li>
             </ul>
-            <button id="mobile-menu-toggle"
-                class="md:hidden text-gray-700 focus:outline-none focus:ring-2 focus:ring-databuddy-purple rounded-md p-2">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            <button id="mobile-menu-toggle" class="mobile-menu-button">
+                <svg class="hamburger-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
                     </path>
                 </svg>
             </button>
         </nav>
-        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 shadow-lg">
-            <ul class="flex flex-col items-center space-y-4">
-                <li><a href="#home"
-                        class="text-gray-700 hover:text-databuddy-purple font-medium rounded-md transition duration-300">Home</a>
-                </li>
-                <li><a href="#services"
-                        class="text-gray-700 hover:text-databuddy-purple font-medium rounded-md transition duration-300">Services</a>
-                </li>
-                <li><a href="#your-advantage"
-                        class="text-gray-700 hover:text-databuddy-purple font-medium rounded-md transition duration-300">Your
-                        Advantage</a></li>
-                <li><a href="#our-approach"
-                        class="text-gray-700 hover:text-databuddy-purple font-medium rounded-md transition duration-300">Our
-                        Approach</a></li>
-                <li><a href="#technical-expertise"
-                        class="text-gray-700 hover:text-databuddy-purple font-medium rounded-md transition duration-300">Technical
-                        Expertise</a></li>
-                <li><a href="#case-studies"
-                        class="text-gray-700 hover:text-databuddy-purple font-medium rounded-md transition duration-300">Case
-                        Studies</a></li>
-                <li><a href="#contact-us"
-                        class="text-gray-700 hover:text-databuddy-purple font-medium rounded-md transition duration-300">Contact</a>
-                </li>
-                <li>
-                    <a href="#book-meeting"
-                        class="bg-databuddy-purple text-white px-5 py-2 rounded-lg font-semibold shadow-md hover:opacity-90 transition duration-300 btn-primary">
-                        Book a Meeting
-                    </a>
-                </li>
+        <div id="mobile-menu" class="mobile-menu">
+            <ul class="mobile-nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#your-advantage" class="nav-link">Your Advantage</a></li>
+                <li><a href="#our-approach" class="nav-link">Our Approach</a></li>
+                <li><a href="#case-studies" class="nav-link">Case Studies</a></li>
+                <li><a href="#contact-us" class="nav-link">Contact</a></li>
+                <li><a href="#book-meeting" class="btn btn-primary-nav">Book a Meeting</a></li>
             </ul>
         </div>
     </header>
 
     <main>
-        <section id="home"
-            class="relative bg-black text-white py-20 md:py-32 overflow-hidden rounded-bl-[100px] rounded-br-[100px] shadow-lg">
-            <div class="absolute inset-0 opacity-20 bg-gradient-to-br from-databuddy-purple to-gray-800"></div>
-            <div class="container mx-auto px-4 relative z-10 text-center">
-                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-up">
-                    Capitalize on Your Business's Data
+        <section id="home" class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <h1 class="hero-title">
+                    Unlock Clarity. Drive Growth.
                 </h1>
-                <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-90 animate-fade-in-up delay-200">
-                    DataBuddy helps SMBs with $1M revenue turn complex information into simple, profitable action. We're
-                    your "Data Buddy"—an approachable partner who champions your success, cuts through the hype, and
-                    translates information into real-world results.
+                <p class="hero-subtitle">
+                    Feeling overwhelmed by data? DataBuddy transforms raw information into actionable insights,
+                    empowering SMBs like yours to achieve significant ROI and gain a strategic edge. Stop reacting,
+                    start predicting.
                 </p>
-                <a href="#book-meeting"
-                    class="bg-databuddy-purple text-white px-8 py-4 rounded-full text-lg font-semibold shadow-xl hover:scale-105 transition-all duration-300 btn-primary animate-fade-in-up delay-400">
-                    Schedule Your Free Assessment
+                <a href="#book-meeting" class="btn btn-hero">
+                    Get Your Free Data Clarity Session
                 </a>
             </div>
         </section>
 
-        <section id="services" class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-                    Solving Your Toughest Business Problems, Not Just Data
+        <section id="services" class="section-padding">
+            <div class="container text-center">
+                <h2 class="section-title">
+                    Your Roadmap to Effortless Growth
                 </h2>
-                <p class="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto mb-12">
-                    Business owners want results. We translate your data into actionable strategies that directly
-                    address your core challenges, helping you achieve more profits, more time, and less stress.
-                </p>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                    <div
-                        class="bg-gray-50 p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-                        <div class="flex justify-center items-center mb-4">
-                            <i class="fa-solid fa-chart-line fa-3x text-databuddy-purple"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Increased Sales & Customer Acquisition</h3>
-                        <p class="text-gray-600">
-                            We analyze your customer data and sales funnels to identify hidden opportunities, optimize
-                            marketing spend, and pinpoint pathways to attract more ideal customers, <strong
-                                class="font-semibold text-gray-800">directly impacting your revenue and freeing up
-                                budget.</strong>
+                <div class="grid-container">
+                    <div class="info-card">
+                        <div class="card-icon-wrapper"><i
+                                class="fa-solid fa-chart-line fa-3x text-databuddy-purple"></i></div>
+                        <h3 class="card-title">Find Your Hidden Pockets of Gold</h3>
+                        <p class="card-text">
+                            Tired of marketing spend that doesn't deliver? We analyze your customer data to pinpoint
+                            your most profitable segments and optimize acquisition strategies, ensuring every dollar
+                            spent on marketing works harder for you.
                         </p>
                     </div>
-                    <div
-                        class="bg-gray-50 p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-                        <div class="flex justify-center items-center mb-4">
-                            <i class="fa-solid fa-dollar-sign fa-3x text-databuddy-purple"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Boosted Profits & Improved Margins</h3>
-                        <p class="text-gray-600">
-                            By scrutinizing operational costs, pricing strategies, and product profitability, we reveal
-                            where to cut expenses and maximize revenue from existing streams, <strong
-                                class="font-semibold text-gray-800">putting more cash directly into your
-                                business.</strong>
+                    <div class="info-card">
+                        <div class="card-icon-wrapper"><i
+                                class="fa-solid fa-dollar-sign fa-3x text-databuddy-purple"></i></div>
+                        <h3 class="card-title">Stop Burning Cash</h3>
+                        <p class="card-text">
+                            Are operational inefficiencies impacting your bottom line? We dive deep into your processes
+                            and pricing, identifying hidden costs and untapped profit margins. Let us help you run a
+                            leaner, more profitable operation.
                         </p>
                     </div>
-                    <div
-                        class="bg-gray-50 p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-                        <div class="flex justify-center items-center mb-4">
-                            <i class="fa-solid fa-hourglass-half fa-3x text-databuddy-purple"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Reclaim Your Time & Reduce Stress</h3>
-                        <p class="text-gray-600">
-                            Automate routine reporting, build intuitive dashboards, and establish data processes that
-                            free you from manual data wrangling, <strong class="font-semibold text-gray-800">giving you
-                                back valuable time and significantly reducing operational stress.</strong>
+                    <div class="info-card">
+                        <div class="card-icon-wrapper"><i
+                                class="fa-solid fa-hourglass-half fa-3x text-databuddy-purple"></i></div>
+                        <h3 class="card-title">Buy Back Your Time</h3>
+                        <p class="card-text">
+                            Spending too much time on manual data tasks? Reclaim your focus. We automate data
+                            collection, analysis, and reporting, freeing you and your team to concentrate on strategic
+                            growth initiatives that move your business forward.
                         </p>
                     </div>
-                    <div
-                        class="bg-gray-50 p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-                        <div class="flex justify-center items-center mb-4">
-                            <i class="fa-solid fa-earth-americas fa-3x text-databuddy-purple"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Strategize for Market Expansion & New
-                            Offerings</h3>
-                        <p class="text-gray-600">
-                            Leverage market data and internal performance metrics to identify viable new markets or
-                            product lines, minimizing risk and maximizing growth potential, <strong
-                                class="font-semibold text-gray-800">leading to sustained revenue streams.</strong>
+                    <div class="info-card">
+                        <div class="card-icon-wrapper"><i
+                                class="fa-solid fa-earth-americas fa-3x text-databuddy-purple"></i></div>
+                        <h3 class="card-title">Strategize for Market Expansion</h3>
+                        <p class="card-text">
+                            Ready to expand your reach? We leverage market data and your internal performance metrics to
+                            identify viable new markets and offerings, minimizing risk and maximizing your potential for
+                            sustainable growth.
                         </p>
                     </div>
-                    <div
-                        class="bg-gray-50 p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-                        <div class="flex justify-center items-center mb-4">
-                            <i class="fa-solid fa-handshake-simple fa-3x text-databuddy-purple"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Prepare for Growth, Hand-off, or Exit</h3>
-                        <p class="text-gray-600">
-                            Establish robust reporting and clear data governance to create a solid foundation for rapid
-                            growth, smooth transitions, or increased valuation for a future exit, <strong
-                                class="font-semibold text-gray-800">securing your investment and reducing future
-                                headaches.</strong>
+                    <div class="info-card">
+                        <div class="card-icon-wrapper"><i
+                                class="fa-solid fa-handshake-simple fa-3x text-databuddy-purple"></i></div>
+                        <h3 class="card-title">Build a Legacy (Or a Massive Payday)</h3>
+                        <p class="card-text">
+                            Whether you're aiming for long-term sustainability or a valuable exit, a data-driven
+                            business is a more resilient and attractive asset. We build the scalable systems and
+                            insights that increase your company's value and prepare you for the future.
                         </p>
                     </div>
-                    <div
-                        class="bg-gray-50 p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-                        <div class="flex justify-center items-center mb-4">
-                            <i class="fa-solid fa-chart-pie fa-3x text-databuddy-purple"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Strategic Insights for Key Leaders</h3>
-                        <p class="text-gray-600">
-                            Provide data-driven clarity for CFOs, CMOs, and Integrators, enabling precise forecasting,
-                            optimized marketing, and seamless system integration, <strong
-                                class="font-semibold text-gray-800">leading to more confident decisions and less
-                                guesswork.</strong>
+                    <div class="info-card">
+                        <div class="card-icon-wrapper"><i
+                                class="fa-solid fa-users-gear fa-3x text-databuddy-purple"></i></div>
+                        <h3 class="card-title">Strategic Insights for Key Leaders</h3>
+                        <p class="card-text">
+                            Equip your leadership team with the clear, data-backed insights they need for confident
+                            decision-making. We provide customized reports and analyses for CFOs, CMOs, and Integrators,
+                            reducing guesswork and driving alignment across your organization.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="your-advantage" class="py-16 md:py-24 bg-gray-100">
-            <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-                    Your Data, Your Advantage: The DataBuddy Philosophy
-                </h2>
-                <div class="max-w-4xl mx-auto mb-12 text-lg text-gray-700 leading-relaxed space-y-6">
-                    <p>
-                        Every company runs on information—from financial reports and product data to operations
-                        manuals, customer contracts, and sales figures. Our specialty isn't just building dashboards
-                        from clean numbers. We excel at parsing all of it to uncover hidden insights that <strong
-                            class="font-semibold text-gray-800">directly influence your bottom line</strong>.
-                    </p>
-                    <p>
-                        We are relentlessly outcome-oriented. We only take on projects where we can deliver a minimum
-                        of <strong class="font-semibold text-gray-800">5 times your investment back</strong>. This isn't
-                        just a goal; it's the core of how we operate, ensuring maximum value and minimal guesswork for
-                        you.
-                    </p>
-                </div>
-
-                <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
-                    <div
-                        class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                        <h3 class="text-xl font-semibold text-databuddy-purple mb-4">Substance Over Hype</h3>
-                        <p class="text-gray-600">
-                            We focus on what actually works, not just what's new and exciting. You won't get a pitch for
-                            the latest AI trend if a simple, robust solution will do the job better. Our commitment is
-                            to find the most direct path to solve your business problems and deliver a meaningful
-                            impact.
+        <section id="our-approach" class="section-padding bg-gray-background">
+            <div class="container text-center">
+                <h2 class="section-title">Our Approach: From Complexity to Clarity</h2>
+                <p class="section-intro">
+                    At DataBuddy, we believe data consulting should be clear, focused, and results-oriented, especially
+                    for growing businesses. Our approach is designed to cut through the complexity and provide you with
+                    a straightforward path to achieving your business goals. Consider these analogies:
+                </p>
+                <div class="analogy-container">
+                    <div class="analogy-item">
+                        <img src="assets/knee-pain-marathon.png"
+                            alt="Illustration of a person running smoothly past a finish line." class="analogy-image">
+                        <h3 class="analogy-title">The "Knee Pain" Analogy: Focusing on the Real Goal</h3>
+                        <p class="analogy-text">
+                            Imagine you want to run a marathon, but you have knee pain. You see a doctor, a physical
+                            therapist, and a pharmacist. Each is an expert, but no one is focused on your actual goal:
+                            running the marathon. This is how most businesses approach data. DataBuddy acts as your
+                            performance coach. We start with your business goal—the marathon—and build a single,
+                            cohesive strategy to get you there.
                         </p>
                     </div>
-                    <div
-                        class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                        <h3 class="text-xl font-semibold text-databuddy-purple mb-4">Your Business, Our Mission</h3>
-                        <p class="text-gray-600">
-                            We treat your business as our own because our success is tied to yours. Every decision is
-                            made as if our own money and legacy were on the line. We're not here for a quick paycheck;
-                            our engagement is structured so that if we don't deliver, we don't get paid. We are true
-                            partners, invested in the high-ROI results we'd demand for ourselves.
-                        </p>
-                    </div>
-                    <div
-                        class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-                        <h3 class="text-xl font-semibold text-databuddy-purple mb-4">The Strategist & The Builder</h3>
-                        <p class="text-gray-600">
-                            Benefit from a rare combination of experience. We bring cutting-edge insights from years at
-                            tech leaders like LinkedIn and Snowflake, paired with the practical perspective of an SMB
-                            owner. We don't just hand you a PowerPoint or a dashboard; we bridge the gap—understanding
-                            your business with an owner's empathy and then personally building the expert technical
-                            solution required to drive real results.
+                    <div class="analogy-item">
+                        <img src="assets/owner-desk.png"
+                            alt="Illustration of a business owner looking confidently at a single, clear chart."
+                            class="analogy-image">
+                        <h3 class="analogy-title">The "Financial Overwhelm" Analogy: Your Trusted Advisor</h3>
+                        <p class="analogy-text">
+                            Think about managing your finances. You're an expert in your industry, but not a tax
+                            accountant. You're wary of advisors with hidden agendas. DataBuddy is your trusted advisor,
+                            but for your data. We speak your language—the language of business outcomes—and build a
+                            strategy that aligns with your long-term goals, ensuring you never overspend on technology
+                            you don't need.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="our-approach" class="py-16 md:py-24 bg-gray-100">
-            <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-                    Our Approach: From Complexity to Clarity
-                </h2>
-                <p class="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto mb-10">
-                    What is DataBuddy? At its core, it's a different way of thinking about data. We believe the goal
-                    isn't to sell you complex tools, but to provide the clearest path to your business objectives. To
-                    explain our philosophy, here are a couple of analogies our clients find helpful.
-                </p>
-
-                <div class="max-w-4xl mx-auto text-left space-y-12 mt-12">
-                    <h3 class="text-2xl font-bold text-databuddy-purple mb-4">The "Knee Pain" Analogy: Focusing on the
-                        Real Goal</h3>
-                    <p class="text-gray-700 leading-relaxed mb-6">
-                        Imagine you want to run a marathon, but you have knee pain. You see a doctor for a diagnosis, a
-                        physical therapist for exercises, and a pharmacist for medication. Each is an expert, but no one
-                        is focused on your actual goal: running the marathon. You're left to piece together their
-                        advice,
-                        hoping it all works.
-                    </p>
-                    <p class="text-gray-700 leading-relaxed mb-6">
-                        <strong>This is how most businesses approach data.</strong> You're sold a dashboard tool, a
-                        cloud
-                        platform, and a consulting workshop—each a separate solution. DataBuddy acts as your performance
-                        coach. We start with your business goal—the marathon—and build a single, cohesive strategy to
-                        get
-                        you there, managing all the specialists so you can focus on the finish line.
-                    </p>
-
-                    <h3 class="text-2xl font-bold text-databuddy-purple mb-4">The "Financial Overwhelm" Analogy: Your
-                        Trusted Advisor</h3>
-                    <p class="text-gray-700 leading-relaxed mb-6">
-                        Think about managing your business's finances. You're an expert in your industry, but you're not
-                        a tax accountant or a corporate lawyer. You know you need to optimize for growth and
-                        profitability, but you don't know who to trust or what questions to ask. You're wary of
-                        advisors with hidden fees or their own agendas.
-                    </p>
-                    <p class="text-gray-700 leading-relaxed mb-6">
-                        <strong>DataBuddy is your trusted advisor, but for your data.</strong> We speak your
-                        language—the
-                        language of business outcomes. We demystify the technical landscape, evaluate options with your
-                        best interest at heart, and build a strategy that aligns with your long-term goals, ensuring you
-                        never overspend on technology you don't need. We are your "Data Buddy," your teammate in the
-                        system.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section id="technical-expertise" class="py-16 md:py-24 bg-gray-50">
-            <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-                    Technical Expertise: Powering Your Data Infrastructure
-                </h2>
-                <p class="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto mb-12">
-                    Beyond business problems, we also provide the deep technical capabilities to build, optimize, and
-                    manage the data systems that drive your success.
-                </p>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                    <div
-                        class="bg-white p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-                        <div class="flex justify-center items-center mb-4">
-                            <i class="fa-solid fa-brain fa-3x text-databuddy-purple"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Strategic Data Consulting</h3>
-                        <p class="text-gray-600">
-                            Develop clear, data-driven strategies for your business goals, including infrastructure
-                            design, optimal tool selection, advanced data analysis, and effective team hiring.
+        <section id="case-studies" class="section-padding">
+            <div class="container text-center">
+                <h2 class="section-title">Proven Impact, Real Results</h2>
+                <p class="section-intro">See how DataBuddy has helped other businesses in the retail and service sectors
+                    achieve significant results.</p>
+                <div class="case-study-container">
+                    <div class="case-study-card">
+                        <h3 class="card-title">Streamlining Operations for a Regional Retailer</h3>
+                        <p class="card-text"><strong>Challenge:</strong> A regional retail business was struggling with
+                            inventory management and predicting customer demand, leading to overstock and lost sales.
                         </p>
+                        <p class="card-text"><strong>Solution:</strong> We implemented an analytics system that
+                            integrated their sales data with market trends, providing accurate forecasting and optimized
+                            inventory levels.</p>
+                        <p class="card-text"><strong>Result:</strong> Reduced inventory costs by 15%, decreased
+                            stockouts by 10%, and increased overall profitability by 8% within three months.</p>
                     </div>
-                    <div
-                        class="bg-white p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-                        <div class="flex justify-center items-center mb-4">
-                            <i class="fa-solid fa-robot fa-3x text-databuddy-purple"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3">AI & Data Strategy and Leadership</h3>
-                        <p class="text-gray-600">
-                            Navigate the complex AI landscape with clarity. We provide the strategic guidance and
-                            leadership to integrate AI effectively, even if you're just starting out.
+                    <div class="case-study-card">
+                        <h3 class="card-title">Increasing Bookings for a National Service Provider</h3>
+                        <p class="card-text"><strong>Challenge:</strong> A service company saw inconsistent lead flow
+                            from their online advertising and had no clear picture of their customer acquisition cost.
                         </p>
-                    </div>
-                    <div
-                        class="bg-white p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-                        <div class="flex justify-center items-center mb-4">
-                            <i class="fa-solid fa-lightbulb fa-3x text-databuddy-purple"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Decision Scientist</h3>
-                        <p class="text-gray-600">
-                            Transform intuition into insight. We help you embed scientific, data-backed processes into
-                            your decision-making, leading to more predictable and profitable outcomes.
-                        </p>
-                    </div>
-                    <div
-                        class="bg-white p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-                        <div class="flex justify-center items-center mb-4">
-                            <i class="fa-solid fa-sitemap fa-3x text-databuddy-purple"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Systems Architect</h3>
-                        <p class="text-gray-600">
-                            Inherited a complex data system you don't trust, or ready to upgrade what's holding you
-                            back? We simplify and redesign your data systems for optimal performance, reduced cost, and
-                            intuitive usability.
-                        </p>
-                    </div>
-                    <div
-                        class="bg-white p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-                        <div class="flex justify-center items-center mb-4">
-                            <i class="fa-solid fa-users-gear fa-3x text-databuddy-purple"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Fractional Data Lead</h3>
-                        <p class="text-gray-600">
-                            Need your first strategic data hire? We'll get you quick wins, build a solid data
-                            foundation, and even help you recruit a full-time team to ensure seamless transition and
-                            continued growth.
-                        </p>
-                    </div>
-                    <div
-                        class="bg-white p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-                        <div class="flex justify-center items-center mb-4">
-                            <i class="fa-solid fa-gear fa-3x text-databuddy-purple"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Data Automation</h3>
-                        <p class="text-gray-600">
-                            Eliminate manual tasks and streamline workflows. We build robust automation solutions that
-                            speed up processes, increase reliability, and free your team for strategic work.
-                        </p>
+                        <p class="card-text"><strong>Solution:</strong> By analyzing their web traffic and ad spend, we
+                            identified the highest-performing channels and optimized their marketing budget toward
+                            platforms that attracted ready-to-buy customers.</p>
+                        <p class="card-text"><strong>Result:</strong> Increased qualified leads by 30% while reducing
+                            customer acquisition cost by 20%.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="case-studies" class="py-16 md:py-24 bg-gray-50">
-            <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-                    Proven Impact, Real Results
-                </h2>
-                <p class="text-gray-700 leading-relaxed mb-6">
-                    My career has focused on using data to drive tangible business outcomes. At tech giants, I
-                    contributed to teams that created significant value: at <strong>LinkedIn</strong>, I helped build
-                    the
-                    data infrastructure that supported its rapid growth, both pre- and post-acquisition by Microsoft; at
-                    <strong>TripAdvisor (FlipKey)</strong>, I focused on initiatives that directly improved revenue; and
-                    at <strong>Snowflake</strong>, I was part of the pre-IPO team that shaped the go-to-market data
-                    culture, contributing to one of the largest software IPOs in history.
-                </p>
-                <p class="text-gray-700 leading-relaxed mb-6">
-                    This experience honed my expertise in two critical areas:
-                </p>
-                <ul class="list-disc list-inside text-gray-700 space-y-2 mb-6">
-                    <li><strong>Bridging the gap between executive vision and technical execution</strong> by
-                        translating complex business needs into clear, data-driven strategies.
-                    </li>
-                    <li><strong>Cutting through complexity</strong> by untangling overgrown technical systems and
-                        building the streamlined, scalable data foundations that accelerate growth.</li>
-                </ul>
-                <p class="text-gray-700 leading-relaxed mb-6">
-                    Today, I channel this enterprise-level experience through my own ventures. As the founder of
-                    <strong>DataBuddy LLC</strong>, I apply these principles to help SMBs achieve transformative
-                    results. Through <strong>MetricDrive</strong>, my business acquisition firm, I evaluate and partner
-                    with companies, understanding value from an owner's perspective. This dual experience ensures I
-                    provide solutions that are not only technically brilliant but also practical, profitable, and
-                    grounded in real-world business reality. The discipline and focus required come naturally, honed
-                    over years as a D1 athlete and now as an Ironman competitor in my spare time.
-                </p>
-                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    <div
-                        class="bg-white p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-                        <h3 class="text-xl font-semibold text-databuddy-purple mb-4">Case Study 1: [Industry]</h3>
-                        <p class="text-gray-600 mb-4">
-                            <span class="font-bold">Challenge:</span> Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit.
-                        </p>
-                        <p class="text-gray-600 mb-4">
-                            <span class="font-bold">Solution:</span> Ut enim ad minim veniam, quis nostrud exercitation
-                            ullamco laboris.
-                        </p>
-                        <p class="text-gray-600 font-bold text-lg">
-                            <span class="text-databuddy-purple">Result:</span> Achieved [Specific Metric] increase and
-                            [X]% cost reduction.
-                        </p>
-                    </div>
-                    <div
-                        class="bg-white p-8 rounded-lg shadow-md border border-gray-100 hover:shadow-lg transition-shadow duration-300">
-                        <h3 class="text-xl font-semibold text-databuddy-purple mb-4">Case Study 2: [Industry]</h3>
-                        <p class="text-gray-600 mb-4">
-                            <span class="font-bold">Challenge:</span> Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum.
-                        </p>
-                        <p class="text-gray-600 mb-4">
-                            <span class="font-bold">Solution:</span> Excepteur sint occaecat cupidatat non proident,
-                            sunt in culpa.
-                        </p>
-                        <p class="text-gray-600 font-bold text-lg">
-                            <span class="text-databuddy-purple">Result:</span> Boosted [Key Metric] by [Y]% and
-                            streamlined operations.
-                        </p>
-                    </div>
-                </div>
-                <div class="mt-12">
-                    <p class="text-lg text-gray-700 mb-6">
-                        Want to learn more about how we can help your business?
-                    </p>
-                    <a href="#book-meeting"
-                        class="bg-databuddy-purple text-white px-8 py-4 rounded-full text-lg font-semibold shadow-xl hover:scale-105 transition-all duration-300 btn-primary">
-                        Discuss Your Business Needs
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section id="book-meeting" class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-                    Book Your Free Consultation
-                </h2>
-                <p class="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto mb-10">
-                    Ready to see how DataBuddy LLC can deliver 5x ROI for your business? Schedule a convenient time
-                    below.
-                </p>
-                <div class="max-w-4xl mx-auto calendly-container shadow-xl border border-gray-200">
-                    <iframe src="https://calendly.com/michaeladavis10/30-min-meeting" frameborder="0"></iframe>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact-us" class="py-16 md:py-24 bg-gray-50 rounded-tl-[100px] rounded-tr-[100px] shadow-lg">
-            <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
-                    Get in Touch
-                </h2>
-                <p class="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto mb-10">
-                    Have a specific question or want to explore possibilities? Send us a message, and we'll get back to
-                    you promptly.
-                </p>
-                <div class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-xl border border-gray-200">
-                    <form id="contact-form" class="space-y-6">
-                        <div>
-                            <label for="name" class="block text-left text-sm font-medium text-gray-700 mb-1">Your
-                                Name</label>
-                            <input type="text" id="name" name="name" required
-                                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-databuddy-purple focus:border-databuddy-purple sm:text-sm">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-left text-sm font-medium text-gray-700 mb-1">Your
-                                Email</label>
-                            <input type="email" id="email" name="email" required
-                                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-databuddy-purple focus:border-databuddy-purple sm:text-sm">
-                        </div>
-                        <div>
-                            <label for="message" class="block text-left text-sm font-medium text-gray-700 mb-1">Your
-                                Message</label>
-                            <textarea id="message" name="message" rows="5" required
-                                class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-databuddy-purple focus:border-databuddy-purple sm:text-sm"></textarea>
-                        </div>
-                        <button type="submit"
-                            class="w-full bg-databuddy-purple text-white py-3 rounded-lg font-semibold shadow-md hover:opacity-90 transition duration-300 btn-primary">
-                            Send Message
-                        </button>
-                    </form>
-                    <div id="success-message" class="success-message">
-                        Thank you for your message! We'll be in touch soon.
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
-    <footer class="bg-black text-gray-400 py-10 md:py-12">
-        <div class="container mx-auto px-4 text-center">
-            <div class="text-2xl font-bold text-white mb-4">
-                <a href="#home" class="flex items-center justify-center">
-                    <img src="assets/DataBuddy logo color RGB.png"
-                        srcset="assets/DataBuddy logo color RGB-small.png 480w, assets/DataBuddy logo color RGB-medium.png 800w"
-                        sizes="(max-width: 600px) 480px, 800px" alt="DataBuddy LLC Logo" class="h-10 w-auto mr-2"
-                        loading="lazy">
-                    <span class="text-databuddy-purple">DataBuddy</span> LLC
-                </a>
-            </div>
-            <p class="mb-4">
-                Driving Data-Driven Results for SMBs.
-            </p>
-            <div class="flex justify-center space-x-6 mb-6">
-                <a href="#home" class="link-hover transition duration-300">Home</a>
-                <a href="#services" class="link-hover transition duration-300">Services</a>
-                <a href="#your-advantage" class="link-hover transition duration-300">Your Advantage</a>
-                <a href="#our-approach" class="link-hover transition duration-300">Our Approach</a>
-                <a href="#technical-expertise" class="link-hover transition duration-300">Technical Expertise</a>
-                <a href="#contact-us" class="link-hover transition duration-300">Contact</a>
-            </div>
-            <p class="text-sm">
-                &copy; 2025 DataBuddy LLC. All rights reserved.
-            </p>
-        </div>
-    </footer>
-
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-                // Close mobile menu if open
-                const mobileMenu = document.getElementById('mobile-menu');
-                if (!mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                }
-            });
-        });
-
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Simple form submission handler (client-side only for this static site)
-        const contactForm = document.getElementById('contact-form');
-        const successMessage = document.getElementById('success-message');
-
-        contactForm.addEventListener('submit', function (e) {
-            e.preventDefault(); // Prevent actual form submission
-
-            // In a real scenario, you'd send this data to a backend (e.g., Netlify Forms, Formspree, custom API)
-            console.log('Form submitted (client-side only):');
-            console.log('Name:', document.getElementById('name').value);
-            console.log('Email:', document.getElementById('email').value);
-            console.log('Message:', document.getElementById('message').value);
-
-            // Display success message and clear form
-            contactForm.reset();
-            successMessage.style.display = 'block';
-
-            // Hide success message after a few seconds
-            setTimeout(() => {
-                successMessage.style.display = 'none';
-            }, 5000);
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
