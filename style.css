@@ -80,6 +80,8 @@ body {
 .desktop-nav-links {
     display: none;
     /* hidden */
+    list-style-type: none;
+    padding: 0;
 }
 
 @media (min-width: 768px) {
@@ -96,6 +98,7 @@ body {
     color: #374151;
     /* text-gray-700 */
     font-weight: 500;
+    text-decoration: none;
     /* font-medium */
     transition: all 0.3s;
 }
@@ -160,6 +163,8 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    list-style-type: none;
+    padding: 0;
     /* space-y-4 */
 }
 
@@ -437,28 +442,99 @@ body {
 }
 
 /* Case Study Section (if you need it) */
-.case-study-container {
-    display: grid;
-    gap: 2rem;
-    max-width: 56rem;
-    /* max-w-4xl */
-    margin-left: auto;
-    margin-right: auto;
+.carousel-viewport {
+    position: relative;
+    max-width: 90%;
+    /* Adjust this to control how much of the next/prev cards are visible */
+    margin: 0 auto;
 }
 
-@media (min-width: 768px) {
-    .case-study-container {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+.case-study-container {
+    display: flex;
+    /* Changed from grid to flex */
+    overflow-x: auto;
+    /* Enables horizontal scrolling */
+    scroll-snap-type: x mandatory;
+    /* Makes scrolling snap to items */
+    scroll-behavior: smooth;
+    /* Enables smooth scrolling via JS */
+    padding: 1rem 0;
+    gap: 1.5rem;
+    /* Space between cards */
+
+    /* Hide the scrollbar for a cleaner look */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.case-study-container::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, and Opera */
 }
 
 .case-study-card {
+    scroll-snap-align: start;
+    /* Each card is a snap point */
+    flex: 0 0 90%;
+    /* Each card takes up 90% of the viewport width */
     background-color: #ffffff;
     padding: 2rem;
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     border: 1px solid #f3f4f6;
     text-align: left;
+}
+
+@media (min-width: 768px) {
+    .case-study-card {
+        flex-basis: 45%;
+        /* Show two cards at a time on medium screens */
+    }
+}
+
+@media (min-width: 1280px) {
+    .case-study-card {
+        flex-basis: 30%;
+        /* Show three cards at a time on large screens */
+    }
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #374151;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.carousel-arrow:hover {
+    background-color: #6350ec;
+    color: #ffffff;
+}
+
+.carousel-arrow.left {
+    left: -1.75rem;
+    /* Position halfway outside the container */
+}
+
+.carousel-arrow.right {
+    right: -1.75rem;
+    /* Position halfway outside the container */
 }
 
 /* --- Add these new styles to your style.css file --- */
@@ -625,4 +701,79 @@ body {
 
 .footer-copyright {
     font-size: 0.875rem;
+}
+
+/* About Me Section */
+.about-container {
+    display: grid;
+    gap: 2.5rem;
+    align-items: center;
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .about-container {
+        grid-template-columns: 1fr 2fr;
+        /* Creates a 1/3, 2/3 column layout */
+        gap: 4rem;
+    }
+}
+
+.about-image-container {
+    width: 100%;
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.about-text-container .section-title {
+    text-align: left;
+}
+
+.about-text {
+    color: #4b5563;
+    /* text-gray-600 */
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Enterprise Experience Section */
+.experience-container {
+    display: grid;
+    gap: 2rem;
+    max-width: 80rem;
+    margin: 3rem auto 0;
+}
+
+@media (min-width: 1024px) {
+    .experience-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.experience-card {
+    background-color: #ffffff;
+    padding: 2.5rem 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.experience-logo {
+    height: 40px;
+    /* Adjust height as needed */
+    width: auto;
+    margin: 0 auto 1.5rem;
+}
+
+.experience-text {
+    color: #4b5563;
+    /* text-gray-600 */
+    line-height: 1.6;
 }
