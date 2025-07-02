@@ -460,3 +460,169 @@ body {
     border: 1px solid #f3f4f6;
     text-align: left;
 }
+
+/* --- Add these new styles to your style.css file --- */
+
+/* Calendly Container (This should already exist, but good to verify) */
+.calendly-container {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    /* rounded-xl */
+    max-width: 64rem;
+    /* max-w-4xl */
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    border: 1px solid #e5e7eb;
+    /* border-gray-200 */
+}
+
+.calendly-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Contact Section */
+.contact-section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background-color: #f9fafb;
+    /* bg-gray-50 */
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    box-shadow: 0 -4px 6px -1px rgb(0 0 0 / 0.05);
+}
+
+@media (min-width: 768px) {
+    .contact-section {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+}
+
+.form-container {
+    max-width: 42rem;
+    /* max-w-xl */
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    border: 1px solid #e5e7eb;
+}
+
+.form-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-group-full {
+    grid-column: 1 / -1;
+    /* Makes element span full width */
+    text-align: left;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+}
+
+.form-input,
+.form-textarea {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: #6350ec;
+    box-shadow: 0 0 0 3px rgba(99, 80, 236, 0.3);
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: #6350ec;
+    color: #ffffff;
+    padding: 0.75rem 0;
+}
+
+.success-message {
+    display: none;
+    background-color: #d1fae5;
+    color: #065f46;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* Footer */
+.main-footer {
+    background-color: #000000;
+    color: #9ca3af;
+    /* text-gray-400 */
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+    .main-footer {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+
+.footer-logo-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-decoration: none;
+}
+
+.footer-logo-text {
+    color: #6350ec;
+}
+
+.footer-logo-text-llc {
+    color: #ffffff;
+    margin-left: 0.25rem;
+}
+
+.footer-tagline {
+    margin-bottom: 1rem;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-copyright {
+    font-size: 0.875rem;
+}
