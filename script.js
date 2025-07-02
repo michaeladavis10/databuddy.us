@@ -43,3 +43,22 @@ contactForm.addEventListener('submit', function (e) {
         successMessage.style.display = 'none';
     }, 5000);
 });
+
+// Carousel Controls
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.getElementById('case-study-track');
+    const leftArrow = document.getElementById('carousel-arrow-left');
+    const rightArrow = document.getElementById('carousel-arrow-right');
+
+    if (track && leftArrow && rightArrow) {
+        leftArrow.addEventListener('click', () => {
+            const cardWidth = track.querySelector('.case-study-card').offsetWidth;
+            track.scrollBy({ left: -cardWidth - 24, behavior: 'smooth' }); // 24px is 1.5rem gap
+        });
+
+        rightArrow.addEventListener('click', () => {
+            const cardWidth = track.querySelector('.case-study-card').offsetWidth;
+            track.scrollBy({ left: cardWidth + 24, behavior: 'smooth' }); // 24px is 1.5rem gap
+        });
+    }
+});
