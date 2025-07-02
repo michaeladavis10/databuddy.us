@@ -697,6 +697,8 @@ body {
     justify-content: center;
     gap: 1.5rem;
     margin-bottom: 1.5rem;
+    list-style-type: none;
+    padding: 0;
 }
 
 .footer-copyright {
@@ -743,6 +745,32 @@ body {
     margin-bottom: 1.5rem;
 }
 
+.about-links {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.about-link-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.25rem;
+    border: 2px solid #e5e7eb;
+    color: #4b5563;
+    border-radius: 9999px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.about-link-item:hover {
+    background-color: #6350ec;
+    color: #ffffff;
+    border-color: #6350ec;
+}
+
 /* Enterprise Experience Section */
 .experience-container {
     display: grid;
@@ -766,7 +794,7 @@ body {
 }
 
 .experience-logo {
-    height: 40px;
+    height: 100px;
     /* Adjust height as needed */
     width: auto;
     margin: 0 auto 1.5rem;
