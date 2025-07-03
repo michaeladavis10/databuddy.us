@@ -1,64 +1,132 @@
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+document.addEventListener('DOMContentLoaded', function () {
+
+    // --- Mobile Menu Toggle ---
+    const mobileMenuButton = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', function () {
+            const isHidden = mobileMenu.style.display === 'none' || mobileMenu.style.display === '';
+            mobileMenu.style.display = isHidden ? 'block' : 'none';
         });
-        // Close mobile menu if open
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (!mobileMenu.classList.contains('hidden')) {
-            mobileMenu.classList.add('hidden');
-        }
+    }
+
+    // --- Close Mobile Menu on Link Click ---
+    const allNavLinks = document.querySelectorAll('.main-header .nav-link');
+    allNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth < 768 && mobileMenu.style.display === 'block') {
+                mobileMenu.style.display = 'none';
+            }
+        });
     });
-});
 
-// Mobile menu toggle
-const mobileMenuButton = document.getElementById('mobile-menu-toggle');
-const mobileMenu = document.getElementById('mobile-menu');
+    // --- Active Nav Link on Scroll ---
+    const sections = document.querySelectorAll('main section[id]');
+    const navLinks = document.querySelectorAll('header .nav-link'); // Selects both desktop and mobile links
 
-mobileMenuButton.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-});
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px 0px -60% 0px', // Triggers when a section is in the top 40% of the viewport
+        threshold: 0
+    };
 
-// Simple form submission handler (client-side only for this static site)
-const contactForm = document.getElementById('contact-form');
-const successMessage = document.getElementById('success-message');
+    const observer = new IntersectionObserver((entries) => {
+        let visibleSectionId = null;
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                visibleSectionId = entry.target.getAttribute('id');
+            }
+        });
 
-contactForm.addEventListener('submit', function (e) {
-    e.preventDefault(); // Prevent actual form submission
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            const href = link.getAttribute('href');
+            if (href === `#${visibleSectionId}`) {
+                link.classList.add('active');
+            }
+        });
 
-    // In a real scenario, you'd send this data to a backend (e.g., Netlify Forms, Formspree, custom API)
-    console.log('Form submitted (client-side only):');
-    console.log('Name:', document.getElementById('name').value);
-    console.log('Email:', document.getElementById('email').value);
-    console.log('Message:', document.getElementById('message').value);
+    }, observerOptions);
 
-    // Display success message and clear form
-    contactForm.reset();
-    successMessage.style.display = 'block';
+    sections.forEach(section => {
+        observer.observe(section);
+    });
 
-    // Hide success message after a few seconds
-    setTimeout(() => {
-        successMessage.style.display = 'none';
-    }, 5000);
-});
 
-// Carousel Controls
-document.addEventListener('DOMContentLoaded', () => {
+    // --- Case Study Carousel ---
     const track = document.getElementById('case-study-track');
     const leftArrow = document.getElementById('carousel-arrow-left');
     const rightArrow = document.getElementById('carousel-arrow-right');
 
     if (track && leftArrow && rightArrow) {
-        leftArrow.addEventListener('click', () => {
-            const cardWidth = track.querySelector('.case-study-card').offsetWidth;
-            track.scrollBy({ left: -cardWidth - 24, behavior: 'smooth' }); // 24px is 1.5rem gap
-        });
+        const scrollAmount = () => {
+            // Calculate the width of a single card to scroll by
+            const card = track.querySelector('.case-study-card');
+            if (card) {
+                // card width + gap (24px = 1.5rem)
+                return card.offsetWidth + 24;
+            }
+            return 300; // fallback
+        };
 
         rightArrow.addEventListener('click', () => {
-            const cardWidth = track.querySelector('.case-study-card').offsetWidth;
-            track.scrollBy({ left: cardWidth + 24, behavior: 'smooth' }); // 24px is 1.5rem gap
+            track.scrollBy({
+                left: scrollAmount(),
+                behavior: 'smooth'
+            });
+        });
+
+        leftArrow.addEventListener('click', () => {
+            track.scrollBy({
+                left: -scrollAmount(),
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    // --- Contact Form Submission ---
+    const contactForm = document.getElementById('contact-form');
+    const successMessage = document.getElementById('success-message');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const formData = new FormData(contactForm);
+            const object = {};
+            formData.forEach((value, key) => {
+                object[key] = value;
+            });
+            const json = JSON.stringify(object);
+
+            // IMPORTANT: Replace 'YOUR_FORM_ID' with your actual Formspree form ID
+            fetch('https://formspree.io/f/YOUR_FORM_ID', {
+                method: 'POST',
+                body: json,
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(response => {
+                    if (response.ok) {
+                        successMessage.style.display = 'block';
+                        contactForm.reset();
+                        contactForm.style.display = 'none';
+                    } else {
+                        response.json().then(data => {
+                            if (Object.hasOwn(data, 'errors')) {
+                                alert(data["errors"].map(error => error["message"]).join(", "));
+                            } else {
+                                alert('Oops! There was a problem submitting your form.');
+                            }
+                        })
+                    }
+                })
+                .catch(error => {
+                    console.error('Form submission error:', error);
+                    alert('Oops! There was a problem submitting your form.');
+                });
         });
     }
 });
+
