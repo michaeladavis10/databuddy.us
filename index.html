@@ -4,526 +4,259 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DataBuddy LLC: Unlock Your Business's Next Level</title>
+
+    <!-- SEO Meta Tags -->
+    <title>DataBuddy | Unlock Clarity, Drive Growth</title>
     <meta name="description"
-        content="DataBuddy LLC helps SMBs with over $1M revenue transform their information into actionable insights, guaranteeing a 5x return on investment. Specializing in outcome-oriented data consulting.">
-    <meta name="keywords"
-        content="data consulting, SMB, small business, enterprise, data analytics, business intelligence, ROI, return on investment, data strategy, DataBuddy LLC">
+        content="DataBuddy helps SMBs gain clarity, save time, and boost profit. Partner with us to transform your data into a powerful asset.">
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- JSON-LD Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "DataBuddy",
+      "description": "A data consultancy for SMBs, specializing in data strategy, analytics, and AI integration to drive profit and efficiency.",
+      "url": "https://databuddy.us",
+      "logo": "assets/DataBuddy logo color RGB.png",
+      "serviceType": "Data Consulting",
+      "areaServed": "US",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "DataBuddy Services",
+        "itemListElement": [
+          {
+            "@type": "OfferCatalog",
+            "name": "Data Strategy & Analytics",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Fractional CDO Services"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Data Automation"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+    </script>
 </head>
 
 <body>
-
-    <header class="main-header">
-        <nav class="main-nav">
-            <div class="logo-container">
-                <a href="#home" class="logo-link">
-                    <img src="assets/DataBuddy logo color RGB.png"
-                        srcset="assets/DataBuddy logo color RGB-small.png 480w, assets/DataBuddy logo color RGB-medium.png 800w"
-                        sizes="(max-width: 600px) 480px, 800px" alt="DataBuddy LLC Logo" class="logo-image"
-                        loading="lazy">
+    <div class="wrapper">
+        <header class="site-header">
+            <div class="container header-container">
+                <a href="index.html" class="site-logo">
+                    <img src="assets/DataBuddy logo color RGB.png" alt="DataBuddy Logo">
                 </a>
-            </div>
-            <ul class="desktop-nav-links">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#case-studies" class="nav-link">Case Studies</a></li>
-                <li><a href="#our-committment" class="nav-link">About DataBuddy</a></li>
-                <li><a href="#book-meeting" class="btn btn-primary-nav">Book a Meeting</a></li>
-            </ul>
-            <button id="mobile-menu-toggle" class="mobile-menu-button">
-                <svg class="hamburger-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
-                    </path>
-                </svg>
-            </button>
-        </nav>
-        <div id="mobile-menu" class="mobile-menu">
-            <ul class="mobile-nav-links">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#case-studies" class="nav-link">Case Studies</a></li>
-                <li><a href="#our-committment" class="nav-link">About DataBuddy</a></li>
-                <li><a href="#book-meeting" class="btn btn-primary-nav">Book a Meeting</a></li>
-            </ul>
-        </div>
-    </header>
-
-    <main>
-        <section id="home" class="hero-section">
-            <div class="hero-overlay"></div>
-            <div class="container hero-content">
-                <h1 class="hero-title">Unlock Clarity. Drive Growth.</h1>
-                <p class="hero-subtitle">Feeling overwhelmed by data? While your competitors are guessing, we give you
-                    the actionable clarity to dominate your market. Stop reacting, start winning.</p>
-                <a href="#book-meeting" class="btn btn-hero">Get Your Free Data Clarity Session</a>
-            </div>
-        </section>
-
-        <section id="services" class="section-padding">
-            <div class="container text-center">
-                <h2 class="section-title">Solving What Actually Matters</h2>
-                <div class="grid-container">
-                    <div class="info-card">
-                        <div class="card-icon-wrapper"><i
-                                class="fa-solid fa-chart-line fa-3x text-databuddy-purple"></i></div>
-                        <h3 class="card-title">Find Your Hidden Pockets of Gold</h3>
-                        <p class="card-text">Don't just grow; grow profitably. We dissect your data to find your most
-                            lucrative customer segments, letting you capture market share your competitors don't even
-                            see.</p>
-                    </div>
-                    <div class="info-card">
-                        <div class="card-icon-wrapper"><i
-                                class="fa-solid fa-dollar-sign fa-3x text-databuddy-purple"></i></div>
-                        <h3 class="card-title">Stop Burning Cash</h3>
-                        <p class="card-text">Are operational inefficiencies impacting your bottom line? We dive deep
-                            into your processes and pricing, identifying hidden costs and untapped profit margins.</p>
-                    </div>
-                    <div class="info-card">
-                        <div class="card-icon-wrapper"><i
-                                class="fa-solid fa-hourglass-half fa-3x text-databuddy-purple"></i></div>
-                        <h3 class="card-title">Buy Back Your Time</h3>
-                        <p class="card-text">Spending too much time on manual data tasks? Reclaim your focus. We
-                            automate data collection, analysis, and reporting, freeing you and your team to concentrate
-                            on strategic growth initiatives that move your business forward.</p>
-                    </div>
-                    <div class="info-card">
-                        <div class="card-icon-wrapper"><i
-                                class="fa-solid fa-earth-americas fa-3x text-databuddy-purple"></i></div>
-                        <h3 class="card-title">Strategize for Market Expansion</h3>
-                        <p class="card-text">Ready to expand your reach? We leverage market data and your internal
-                            performance metrics to identify viable new markets and offerings, minimizing risk and
-                            maximizing your potential for sustainable growth.</p>
-                    </div>
-                    <div class="info-card">
-                        <div class="card-icon-wrapper"><i
-                                class="fa-solid fa-handshake-simple fa-3x text-databuddy-purple"></i></div>
-                        <h3 class="card-title">Build a Legacy (Or a Massive Payday)</h3>
-                        <p class="card-text">Whether you're aiming for long-term sustainability or a valuable exit, a
-                            data-driven business is a more resilient and attractive asset. We build the scalable systems
-                            and insights that increase your company's value and prepare you for the future.</p>
-                    </div>
-                    <div class="info-card">
-                        <div class="card-icon-wrapper"><i
-                                class="fa-solid fa-users-gear fa-3x text-databuddy-purple"></i></div>
-                        <h3 class="card-title">Strategic Insights for Key Leaders</h3>
-                        <p class="card-text">Equip your leadership team with the clear, data-backed insights they need
-                            for confident decision-making. We provide customized reports and analyses for CFOs, CMOs,
-                            and Integrators, reducing guesswork and driving alignment across your organization.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="case-studies" class="section-padding bg-gray-background">
-            <div class="container text-center">
-                <h2 class="section-title">Partnerships in Practice</h2>
-                <p class="section-intro">Every business has a story of moving from frustration to control. Here are a
-                    few of ours.</p>
-
-                <div class="carousel-viewport">
-                    <button id="carousel-arrow-left" class="carousel-arrow left" aria-label="Previous Case Study">
-                        &#8249;
-                    </button>
-
-                    <div id="case-study-track" class="case-study-container">
-                        <div class="case-study-card">
-                            <h3 class="card-title">Data Strategy Reboot for a National Governing Body of Sport</h3>
-                            <p class="card-text"><strong>Challenge:</strong> A national governing body of sport was
-                                plagued by poor data quality, overwhelming their internal team. We found the root cause
-                                was a deep disconnect between their operational practices and vendor capabilities.</p>
-                            <p class="card-text"><strong>Solution:</strong> As part-time consultants, we diagnosed the
-                                core issues and recommended a full strategic reboot. We then delivered the initial
-                                technical specifications to launch a new, properly aligned data ecosystem.</p>
-                            <p class="card-text"><strong>Result:</strong> The organization shifted from treating
-                                symptoms to tackling the root cause, equipped with a strategic roadmap to build a data
-                                foundation that would support their mission for years to come.</p>
-                        </div>
-                        <div class="case-study-card">
-                            <h3 class="card-title">Rescuing a University AI Research Project</h3>
-                            <p class="card-text"><strong>Challenge:</strong> When a key developer left a university
-                                AI/ML research project, they left behind critical, non-working code with zero
-                                documentation, putting the entire project at risk.</p>
-                            <p class="card-text"><strong>Solution:</strong> We performed a technical rescue:
-                                reverse-engineering the complex code, restoring functionality, and creating
-                                comprehensive documentation to empower the remaining team.</p>
-                            <p class="card-text"><strong>Result:</strong> The project was saved from a standstill. The
-                                team was no longer dependent on a single person and could continue their important
-                                research independently and with confidence.</p>
-                        </div>
-                        <div class="case-study-card">
-                            <h3 class="card-title">Guiding R&D Investment for a Medical Device Innovator</h3>
-                            <p class="card-text"><strong>Challenge:</strong> A non-technical team was struggling to
-                                analyze disjointed data to vet new products. The real goal was to make "go/no-go"
-                                decisions before committing to multi-million dollar R&D investments.</p>
-                            <p class="card-text"><strong>Solution:</strong> We aggregated 9 disparate data sources into
-                                a unified dashboard with clear recommendations. We then trained their team, taking them
-                                from struggling with Excel to confidently running Python scripts in under 6 months.</p>
-                            <p class="card-text"><strong>Result:</strong> The company saved millions by identifying
-                                non-viable projects months ahead of schedule, and their team was up-leveled with
-                                lasting, independent data skills.</p>
-                        </div>
-                        <div class="case-study-card">
-                            <h3 class="card-title">Strategic Data Partner for a Private Equity Firm</h3>
-                            <p class="card-text"><strong>Challenge:</strong> A PE firm acquiring HVAC companies had no
-                                in-house technical advocate, leaving them reliant on potentially biased guidance from
-                                vendors and subsidiary staff.</p>
-                            <p class="card-text"><strong>Solution:</strong> We served as their dedicated technical
-                                partner, translating complex data migration options into clear business outcomes. We
-                                then executed the hands-on migrations to their new, standardized platform.</p>
-                            <p class="card-text"><strong>Result:</strong> The PE firm was de-risked from vendor lock-in
-                                and could confidently accelerate its acquisition strategy. Once their needs were met, we
-                                advocated for our own dismissal, ensuring maximum client value.</p>
-                        </div>
-                        <div class="case-study-card">
-                            <h3 class="card-title">Building a Data Curriculum for an EdTech Startup</h3>
-                            <p class="card-text"><strong>Challenge:</strong> An online startup needed to develop a data
-                                analysis curriculum but lacked the expertise to create practical content and train their
-                                instructors to teach it effectively.</p>
-                            <p class="card-text"><strong>Solution:</strong> Leveraging our experience as an Adjunct
-                                Lecturer at two universities, we designed a key-skill-focused curriculum and then
-                                trained their instructors on how to effectively lead their own cohorts.</p>
-                            <p class="card-text"><strong>Result:</strong> The startup launched a successful new program
-                                with a fully-trained instructional team. We provided the curriculum, trained the
-                                trainers, and moved on, empowering them to scale independently.</p>
-                        </div>
-                        <!-- <div class="case-study-card">
-                            <h3 class="card-title">Building a Profit Engine for a Master Craftsman</h3>
-                            <p class="card-text"><strong>Challenge:</strong> A home remodel contractor with superior
-                                craftsmanship was consistently losing money by underbidding jobs and mis-estimating
-                                timelines because he dreaded the administrative overhead.</p>
-                            <p class="card-text"><strong>Solution:</strong> We built a simple yet powerful solution in
-                                Google Sheets that connected directly to his Home Depot account, requiring only a single
-                                entry per day to accurately track all project expenses and time.</p>
-                            <p class="card-text"><strong>Result:</strong> We immediately identified thousands of dollars
-                                in unbilled materials for return, and built a solid dataset that now empowers him to bid
-                                on future jobs with confidence and profitability.</p>
-                    </div>
-                -->
-                    </div>
-                    <button id="carousel-arrow-right" class="carousel-arrow right" aria-label="Next Case Study">
-                        &#8250;
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="section-padding">
-            <div class="container">
-                <h2 class="section-title">A Different Breed of Partner</h2>
-                <div class="about-container">
-                    <div class="about-text-container">
-                        <p class="about-text">DataBuddy was founded on a simple premise: business owners deserve
-                            a technical partner who operates with an owner's mindset. Years spent building
-                            massive data systems for world-class tech companies—including <strong>LinkedIn,
-                                TripAdvisor, and Snowflake</strong>—revealed a clear gap between
-                            enterprise-level strategy and the practical, bottom-line needs of most businesses.
-                        </p>
-                        <p class="about-text">Our approach is to act as the advocate every business owner wishes
-                            they had. We translate complex technical options into clear business outcomes. This
-                            perspective is grounded in direct experience, not just as technical experts, but
-                            also as business owners through our work acquiring and advising SMBs. The focus is
-                            always on straight answers and practical solutions that generate real ROI.</p>
-                        <p class="about-text">The work is defined by a framework of discipline and execution,
-                            honed through a background that includes competing as a D1 athlete and finishing
-                            multiple Ironman triathlons. The methodology is simple: perform the deep analysis required
-                            to solve the right problem, and deliver lasting value. Our partnership is measured by your
-                            success, not our billable hours.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="our-committment" class="section-padding bg-gray-background">
-            <div class="container text-center">
-                <h2 class="section-title">The DataBuddy Difference</h2>
-                <div class="grid-container">
-                    <div class="info-card">
-                        <h3 class="card-title text-databuddy-purple">No Fluff, Just Results</h3>
-                        <p class="card-text">We focus on what actually works, not just what's new and exciting... Our
-                            commitment is to find the most direct path to solve your business problems. No excuses, no
-                            wasted time.</p>
-                    </div>
-                    <div class="info-card">
-                        <h3 class="card-title text-databuddy-purple">We Treat Your Money Like Our Money</h3>
-                        <p class="card-text">As entrepreneurs ourselves, we understand the value of every dollar. Our
-                            commitment is to deliver a minimum 5x ROI, and our engagements are structured to reflect
-                            that. We're invested in your success.</p>
-                    </div>
-                    <div class="info-card">
-                        <h3 class="card-title text-databuddy-purple">The Expert Mindset, The Builder's Work Ethic</h3>
-                        <p class="card-text">Benefit from world-class data expertise without the ivory tower. We combine
-                            strategic thinking honed at tech leaders with a hands-on approach, working directly with
-                            your team to implement solutions that drive real change.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="our-approach" class="section-padding">
-            <div class="container text-center">
-                <h2 class="section-title">Thinking Differently About Data</h2>
-                <p class="section-intro">At DataBuddy, we believe data consulting should be clear and focused. Our
-                    approach is designed to cut through complexity and provide you with a straightforward path to
-                    achieving your business goals. Consider these analogies:</p>
-                <div class="analogy-container">
-                    <div class="analogy-item">
-                        <img src="assets/analogy-runner.png" alt="Illustration of a person running smoothly."
-                            class="analogy-image">
-                        <h3 class="analogy-title">The "Knee Pain" Analogy</h3>
-                        <p class="analogy-text">Imagine you want to run a marathon, but you have knee pain. The doctor
-                            diagnoses the pain, the physical therapist gives you exercises, and the insurance company
-                            dictates the treatment. Each specialist solves their piece of the puzzle, but no one is
-                            focused on your actual goal: running the marathon. You're left to navigate this complex
-                            system alone, acting as your own advocate.</p>
-                        <p class="analogy-text" style="margin-top: 1rem;"><strong>This is exactly how businesses
-                                experience data problems.</strong> You're sold a dashboard tool, a cloud platform, and a
-                            consulting workshop, but no one is accountable for the business result. DataBuddy acts as
-                            your performance coach and advocate. We start with your ultimate goal—the marathon—and build
-                            the single, cohesive strategy that gets you across the finish line.</p>
-                    </div>
-                    <div class="analogy-item">
-                        <img src="assets/analogy-advisor.png"
-                            alt="Illustration of a business owner looking at a clear chart." class="analogy-image">
-                        <h3 class="analogy-title">The "Financial Overwhelm" Analogy</h3>
-                        <p class="analogy-text">Think about managing your business's finances. You're an expert in your
-                            industry, but not a tax accountant or corporate lawyer. You know you need to optimize for
-                            growth, but you're wary of advisors with hidden fees or their own agendas. You don't know
-                            who to trust or what questions to ask.</p>
-                        <p class="analogy-text" style="margin-top: 1rem;"><strong>This is how many owners feel about
-                                their data.</strong> The landscape of vendors and tools is confusing and expensive.
-                            DataBuddy acts as your trusted advisor, but for your data. We speak your language—business
-                            outcomes—and demystify the technical world, ensuring you never overspend on technology you
-                            don't need and that every decision aligns with your long-term goals.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="enterprise-experience" class="section-padding bg-gray-background">
-            <div class="container text-center">
-                <h2 class="section-title">An Enterprise-Grade Foundation</h2>
-                <p class="section-intro">Our philosophy is built on solving real problems at the highest level. Here’s a
-                    look at the accomplishments from our time inside three of the world's most iconic tech companies.
-                    This is the level of expertise required to win—and it's the foundation we bring to your business.
-                </p>
-                <div class="experience-container">
-                    <div class="experience-card">
-                        <img src="assets/snowflake-logo.png" alt="Snowflake Logo" class="experience-logo">
-                        <p class="experience-text"><strong>The Challenge:</strong> To fuel a historic IPO,
-                            Snowflake's sales team needed a single source of truth for their CRM and predictive
-                            insights to operate at peak efficiency.<br><br><strong>The Work:</strong> This role
-                            involved building the core GTM data infrastructure using cutting-edge tools and
-                            developing ML models for sales forecasting.<br><br><strong>The Result:</strong>
-                            These foundational systems were critical in supporting the sales engine that powered
-                            Snowflake to one of the largest software IPOs in history.</p>
-                    </div>
-                    <div class="experience-card">
-                        <img src="assets/linkedin-logo.png" alt="LinkedIn Logo" class="experience-logo">
-                        <p class="experience-text"><strong>The Challenge:</strong> LinkedIn's ads division was
-                            experiencing explosive growth, which required data systems that were not only
-                            scalable but also deeply integrated with operational procedures.<br><br><strong>The
-                                Work:</strong> This role focused on building robust revenue, ads, and
-                            forecasting tools, architecting them to be resilient by integrating deeply with team
-                            workflows.<br><br><strong>The Result:</strong> These systems directly powered the
-                            ads team's growth, proved durable enough to support the company through its
-                            acquisition, and are still in use over 10 years later.</p>
-                    </div>
-                    <div class="experience-card">
-                        <img src="assets/tripadvisor-logo.png" alt="TripAdvisor Logo" class="experience-logo">
-                        <p class="experience-text"><strong>The Challenge:</strong> The FlipKey division needed
-                            to accelerate growth to become the core of TripAdvisor's vacation rental strategy,
-                            requiring a platform for rapid, data-driven experimentation.<br><br><strong>The
-                                Work:</strong> Key contributions included building the A/B testing framework and
-                            a behavioral engine for search to remove friction from the user signup
-                            process.<br><br><strong>The Result:</strong> The successful growth engine built at
-                            FlipKey became the foundation that would ultimately power TripAdvisor's entire
-                            vacation rental platform.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="technical-expertise" class="section-padding">
-            <div class="container text-center">
-                <h2 class="section-title">Your End-to-End Data Solution</h2>
-                <p class="section-intro">Beyond high-level strategy, we provide the deep technical expertise to build,
-                    optimize, and manage the data systems that drive your success.</p>
-                <div class="grid-container">
-                    <div class="info-card">
-                        <div class="card-icon-wrapper"><i class="fa-solid fa-brain fa-3x text-databuddy-purple"></i>
-                        </div>
-                        <h3 class="card-title">Strategic Data Consulting</h3>
-                        <p class="card-text">Develop clear, data-driven strategies for your business goals, including
-                            infrastructure design, optimal tool selection, advanced data analysis, and effective team
-                            hiring.</p>
-                    </div>
-                    <div class="info-card">
-                        <div class="card-icon-wrapper"><i class="fa-solid fa-robot fa-3x text-databuddy-purple"></i>
-                        </div>
-                        <h3 class="card-title">AI & Data Strategy</h3>
-                        <p class="card-text">Navigate the complex AI landscape with clarity. We provide the strategic
-                            guidance and leadership to integrate AI effectively, even if you're just starting out.</p>
-                    </div>
-                    <div class="info-card">
-                        <div class="card-icon-wrapper"><i class="fa-solid fa-lightbulb fa-3x text-databuddy-purple"></i>
-                        </div>
-                        <h3 class="card-title">Decision Science</h3>
-                        <p class="card-text">Transform intuition into insight. We help you embed scientific, data-backed
-                            processes into your decision-making, leading to more predictable and profitable outcomes.
-                        </p>
-                    </div>
-                    <div class="info-card">
-                        <div class="card-icon-wrapper"><i class="fa-solid fa-sitemap fa-3x text-databuddy-purple"></i>
-                        </div>
-                        <h3 class="card-title">Systems Architecture</h3>
-                        <p class="card-text">Inherited a complex data system you don't trust? We simplify and redesign
-                            your data systems for optimal performance, reduced cost, and intuitive usability.</p>
-                    </div>
-                    <div class="info-card">
-                        <div class="card-icon-wrapper"><i
-                                class="fa-solid fa-users-gear fa-3x text-databuddy-purple"></i></div>
-                        <h3 class="card-title">Fractional Data Leadership</h3>
-                        <p class="card-text">Need your first strategic data hire? We provide quick wins, build a solid
-                            data foundation, and can even help you recruit your full-time team to ensure a seamless
-                            transition.</p>
-                    </div>
-                    <div class="info-card">
-                        <div class="card-icon-wrapper"><i class="fa-solid fa-gear fa-3x text-databuddy-purple"></i>
-                        </div>
-                        <h3 class="card-title">Data Automation</h3>
-                        <p class="card-text">Eliminate manual tasks and streamline workflows. We build robust automation
-                            solutions that speed up processes, increase reliability, and free your team for high-value
-                            strategic work.</p>
-                    </div>
-
-                    <div class="info-card">
-                        <div class="card-icon-wrapper"><i
-                                class="fa-solid fa-magnifying-glass-chart fa-3x text-databuddy-purple"></i></div>
-                        <h3 class="card-title">Forecasting & Predictive Intelligence</h3>
-                        <p class="card-text">Leverage your historical data and machine learning to build predictive
-                            models
-                            for sales, customer behavior, and operational demand, allowing you to plan for the future
-                            with
-                            confidence.</p>
-                    </div>
-                    <div class="info-card">
-                        <div class="card-icon-wrapper"><i class="fa-solid fa-vials fa-3x text-databuddy-purple"></i>
-                        </div>
-                        <h3 class="card-title">Experimentation & A/B Testing</h3>
-                        <p class="card-text">Design and implement a rigorous A/B testing framework to enable rapid,
-                            data-driven decisions on pricing, product features, and marketing strategies.</p>
-                    </div>
-                    <div class="info-card">
-                        <div class="card-icon-wrapper"><i
-                                class="fa-solid fa-file-invoice-dollar fa-3x text-databuddy-purple"></i></div>
-                        <h3 class="card-title">Pro-Forma & Financial Modeling</h3>
-                        <p class="card-text">Build detailed financial models to forecast future performance, assess the
-                            viability of new ventures, or prepare for fundraising and acquisitions.</p>
-                    </div>
-                </div>
-        </section>
-
-        <section id="book-meeting" class="section-padding">
-            <div class="container text-center">
-                <h2 class="section-title">Book Your Free Consultation</h2>
-                <p class="section-intro">Ready to see how DataBuddy can deliver 5x ROI for your business? Schedule a
-                    convenient time below.</p>
-                <div class="calendly-container">
-                    <iframe src="https://calendly.com/michaeladavis10/30-min-meeting" frameborder="0"></iframe>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact-us" class="contact-section">
-            <div class="container text-center">
-                <h2 class="section-title">Get in Touch</h2>
-                <p class="section-intro">Have a specific question or want to explore possibilities? Send us a message,
-                    and we'll get back to you promptly.</p>
-                <div class="form-container">
-                    <form id="contact-form" class="form-grid">
-                        <div class="form-group">
-                            <label for="name" class="form-label">Your Name</label>
-                            <input type="text" id="name" name="name" required class="form-input">
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="form-label">Your Email</label>
-                            <input type="email" id="email" name="email" required class="form-input">
-                        </div>
-                        <div class="form-group form-group-full">
-                            <label for="message" class="form-label">Your Message</label>
-                            <textarea id="message" name="message" rows="5" required class="form-textarea"></textarea>
-                        </div>
-                        <div class="form-group-full">
-                            <button type="submit" class="btn btn-submit">Send Message</button>
-                        </div>
-                    </form>
-                    <div id="success-message" class="success-message">
-                        Thank you for your message! We'll be in touch soon.
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer id="footer" class="main-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <!-- Column 1: Brand -->
-                <div class="footer-column">
-                    <a href="#home" class="footer-logo-link">
-                        <img src="assets/DataBuddy logo color white letters RGB.png" alt="DataBuddy LLC Logo"
-                            class="logo-image">
-                    </a>
-                    <p class="footer-tagline">We translate complex data into clear, actionable strategies that drive
-                        real business growth.</p>
-
-                </div>
-
-                <!-- Column 2: Navigation -->
-                <div class="footer-column">
-                    <h4 class="footer-heading">Navigate</h4>
-                    <ul class="footer-nav-vertical">
-                        <li><a href="#services" class="nav-link">Services</a></li>
-                        <li><a href="#case-studies" class="nav-link">Case Studies</a></li>
-                        <li><a href="#about" class="nav-link">About DataBuddy</a></li>
-                        <li><a href="#book-meeting" class="nav-link">Book a Meeting</a></li>
+                <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false">
+                    <span class="hamburger" aria-hidden="true"></span>
+                    <span class="sr-only">Menu</span>
+                </button>
+                <nav class="main-nav" id="main-nav">
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="partnership-model.html">Partnership Model</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="real-world-applications.html">Real-World Applications</a></li>
+                        <li><a href="contact.html" class="nav-button">Book a Meeting</a></li>
                     </ul>
-                </div>
-
-                <!-- Column 3: Contact -->
-                <div class="footer-column">
-                    <h4 class="footer-heading">Get in Touch</h4>
-                    <ul class="footer-contact-list">
-                        <li><i class="fa-solid fa-location-dot"></i> <span>Sacramento, CA</span></li>
-                        <li><i class="fa-solid fa-envelope"></i> <a href="mailto:mdavis@databuddy.us"
-                                class="nav-link">mdavis@databuddy.us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-socials">
-                    <a href="https://www.linkedin.com/in/michaeladavis1/" target="_blank" rel="noopener noreferrer"
-                        class="social-link" aria-label="LinkedIn Profile">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a href="https://metricdrive.us" target="_blank" rel="noopener noreferrer" class="social-link"
-                        aria-label="MetricDrive Website">
-                        <i class="fa-solid fa-briefcase"></i>
-                    </a>
-                </div>
+                </nav>
             </div>
-            <div class="footer-bottom">
-                <p class="footer-copyright">&copy; 2025 DataBuddy LLC. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+        </header>
 
-    <script src="script.js"></script>
-</body>
+        <main>
+            <section class="hero">
+                <div class="container">
+                    <h1>Your Data Holds Untapped Profit.</h1>
+                    <h2>We Unlock It.</h2>
+                    <a href="contact.html" class="cta-button">Get Your Free Data Clarity Session</a>
+                </div>
+            </section>
 
-</html>
+            <section class="problem-solution bg-light">
+                <div class="container">
+                    <h2 class="section-title">Is This Your Reality?</h2>
+                    <div class="problem-cards">
+                        <div class="problem-card">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <h3>Dashboards aren't impacting your bottom line?</h3>
+                            <p>We transform reports into profit-generating assets by focusing on tangible outcomes, not
+                                just tools.</p>
+                        </div>
+                        <div class="problem-card">
+                            <i class="fa-solid fa-robot"></i>
+                            <h3>Competitors leveraging AI, but you're unsure where to start?</h3>
+                            <p>We cut through the hype to implement AI strategies that deliver measurable ROI, not just
+                                buzzwords.</p>
+                        </div>
+                        <div class="problem-card">
+                            <i class="fa-solid fa-users"></i>
+                            <h3>Struggling with inconsistent data from different teams?</h3>
+                            <p>We establish a single source of truth, unifying your data for consistent, reliable
+                                insights across your organization.</p>
+                        </div>
+                        <div class="problem-card">
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                            <h3>Ready to scale but unsure how data fits your growth plan?</h3>
+                            <p>We identify the key data levers that will drive sustainable growth and unlock your
+                                business's potential.</p>
+                        </div>
+                        <div class="problem-card">
+                            <i class="fa-solid fa-handshake"></i>
+                            <h3>Wary of tool vendors with biased recommendations?</h3>
+                            <p>As your data fiduciary, our advice is always unbiased. Our success is tied to yours, with
+                                no hidden agendas.</p>
+                        </div>
+                        <div class="problem-card">
+                            <i class="fa-solid fa-sack-dollar"></i>
+                            <h3>Revenue is growing, but profit margins are stagnant?</h3>
+                            <p>We uncover hidden operational inefficiencies and revenue opportunities, putting cash
+                                directly back into your business.</p>
+                        </div>
+                        <div class="problem-card">
+                            <i class="fa-solid fa-clock"></i>
+                            <h3>Drowning in data instead of focusing on your passion?</h3>
+                            <p>Let us automate and manage the numbers, so you can get back to what you love—running your
+                                business.</p>
+                        </div>
+                        <div class="problem-card">
+                            <i class="fa-solid fa-building"></i>
+                            <h3>Planning your next big move—expansion, acquisition, or exit?</h3>
+                            <p>We build the robust data foundation that makes your business more valuable, resilient,
+                                and ready for what's next.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="reiterate">
+                <div class="container text-center">
+                    <h2 class="section-title">We Bridge the Gap: Data Expertise Meets Business Acumen.</h2>
+                    <p class="subtitle">We speak both languages fluently: data and business. This unique perspective
+                        means we don't just deliver technical solutions; we deliver strategies that directly impact your
+                        bottom line.</p>
+                    <p class="subtitle">We're not typical consultants. We reject the model of bloated retainers and
+                        vague promises. Our partnership is built on a simple, powerful principle: we only succeed when
+                        you do. Your financial results are our ultimate metric.</p>
+                </div>
+            </section>
+
+            <section class="trusted-by bg-light">
+                <div class="container">
+                    <h2 class="section-title">Proven Across Industries</h2>
+                    <p class="subtitle">Our principles aren't theoretical. We've applied them in the real world to
+                        drive results across a diverse range of sectors—from high-tech and finance to non-profits and
+                        main street businesses.</p>
+                    <div class="industry-grid">
+                        <div class="industry-card">
+                            <i class="fa-solid fa-trophy"></i>
+                            <span>National Sporting Bodies</span>
+                        </div>
+                        <div class="industry-card">
+                            <i class="fa-solid fa-flask"></i>
+                            <span>University Research</span>
+                        </div>
+                        <div class="industry-card">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                            <span>Medical Devices</span>
+                        </div>
+                        <div class="industry-card">
+                            <i class="fa-solid fa-chart-pie"></i>
+                            <span>Private Equity</span>
+                        </div>
+                        <div class="industry-card">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <span>EdTech Startups</span>
+                        </div>
+                        <div class="industry-card">
+                            <i class="fa-solid fa-dumbbell"></i>
+                            <span>Fitness & Wellness</span>
+                        </div>
+                        <div class="industry-card">
+                            <i class="fa-solid fa-cloud"></i>
+                            <span>B2B SaaS</span>
+                        </div>
+                        <div class="industry-card">
+                            <i class="fa-solid fa-truck-fast"></i>
+                            <span>Logistics & Supply Chain</span>
+                        </div>
+                        <div class="industry-card">
+                            <i class="fa-solid fa-hard-hat"></i>
+                            <span>Construction & Real Estate</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cta-bottom text-center">
+                <div class="container">
+                    <h2 class="section-title">Ready for Real Results?</h2>
+                    <a href="contact.html" class="cta-button">Book a Meeting</a>
+                </div>
+            </section>
+        </main>
+
+        <footer id="footer" class="main-footer">
+            <div>
+                <div class="footer-grid">
+                    <div class="footer-column">
+                        <a href="index.html" class="footer-logo-link">
+                            <img src="assets/DataBuddy logo color white letters RGB.png" alt="DataBuddy LLC Logo"
+                                class="logo-image">
+                        </a>
+                        <p class="footer-tagline">We translate complex data into clear, actionable strategies that drive
+                            real business growth.</p>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Navigate</h4>
+                        <ul class="footer-nav-vertical">
+                            <li><a href="index.html" class="nav-link">Home</a></li>
+                            <li><a href="partnership-model.html" class="nav-link">Partnership Model</a></li>
+                            <li><a href="about.html" class="nav-link">About</a></li>
+                            <li><a href="real-world-applications.html" class="nav-link">Real-World Applications</a></li>
+                            <li><a href="contact.html" class="nav-link">Book a Meeting</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Get in Touch</h4>
+                        <ul class="footer-contact-list">
+                            <li><i class="fa-solid fa-location-dot"></i> <span>Sacramento, CA</span></li>
+                            <li><i class="fa-solid fa-envelope"></i> <a href="mailto:mdavis@databuddy.us"
+                                    class="nav-link">mdavis@databuddy.us</a></li>
+                            <li><i class="fa-solid fa-comment-dots"></i> <a href="contact.html" class="nav-link">Send a Message</a></li>
+                        </ul>
+                        <div class="footer-socials">
+                            <a href="https://www.linkedin.com/in/michaeladavis1/" target="_blank"
+                                rel="noopener noreferrer" class="social-link" aria-label="LinkedIn Profile">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                            <a href="https://metricdrive.us" target="_blank" rel="noopener noreferrer"
+                                class="social-link" aria-label="MetricDrive Website">
+                                <i class="fa-solid fa-briefcase"></i>
+                            </a>
+                        </div>
+                    </div>
