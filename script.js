@@ -50,8 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
             const json = JSON.stringify(object);
 
-            // IMPORTANT: Replace 'YOUR_FORM_ID' with your actual Formspree form ID
-            fetch('https://formspree.io/f/YOUR_FORM_ID', {
+            fetch('https://formspree.io/f/mdkzrpej', {
                 method: 'POST',
                 body: json,
                 headers: {
@@ -89,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
         card.addEventListener('mouseenter', (event) => {
             hoverTimer = setTimeout(() => {
                 hoverPromptCloud.textContent = "Click in the box to contact us to solve it!"; // Updated text
-                
+
                 // Position the cloud relative to the hovered card
                 const cardRect = card.getBoundingClientRect();
                 const cloudWidth = hoverPromptCloud.offsetWidth;

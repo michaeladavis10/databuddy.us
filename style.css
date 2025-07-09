@@ -725,12 +725,12 @@ section:first-of-type {
 }
 
 .contact-form .form-group {
-    margin-bottom: var(--spacing-m); /* Spacing between form groups */
+    margin-bottom: 0.2rem; /* Spacing between form groups */
 }
 
 .contact-form label {
     display: block; /* Ensure label is on its own line */
-    margin-bottom: var(--spacing-xs); /* Space between label and input */
+    margin-bottom: 0.1rem; /* Space between label and input */
     font-weight: 700;
     color: var(--color-text);
     font-size: 0.95rem;
@@ -807,6 +807,26 @@ section:first-of-type {
     font-weight: 700;
     text-align: center;
     margin-top: var(--spacing-m);
+}
+
+.success-message {
+    background-color: #e9f7ef;
+    border: 1px solid #a3d9b8;
+    color: #2b6b45;
+    padding: var(--spacing-m);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.success-message h4 {
+    color: #2b6b45;
+    margin-top: 0;
+    margin-bottom: var(--spacing-xs);
+}
+
+.success-message p {
+    margin-bottom: 0;
+    max-width: none;
 }
 
 .what-to-expect ul {
