@@ -23,6 +23,7 @@
 
     --font-family-heading: 'Lora', serif;
     --font-family-body: 'Lato', sans-serif;
+    --font-display: 'swap';
 
     --spacing-xs: 0.5rem;
     /* 8px */
@@ -410,56 +411,69 @@ section:first-of-type {
 
 /* Industry Grid */
 .industry-grid {
-    display: flex; /* Use flexbox for more control over spacing and wrapping */
+    display: flex;
+    /* Use flexbox for more control over spacing and wrapping */
     flex-wrap: wrap;
     justify-content: center;
-    gap: var(--spacing-s); /* Smaller gap between items */
+    gap: var(--spacing-s);
+    /* Smaller gap between items */
     margin-top: var(--spacing-l);
 }
 
 .industry-card {
     background-color: var(--color-background);
     border: 1px solid var(--color-border);
-    padding: var(--spacing-xs) var(--spacing-s); /* Even smaller padding, horizontal emphasis */
-    border-radius: 20px; /* More rounded edges for oval shape */
+    padding: var(--spacing-xs) var(--spacing-s);
+    /* Even smaller padding, horizontal emphasis */
+    border-radius: 20px;
+    /* More rounded edges for oval shape */
     display: flex;
-    align-items: center; /* Align icon and text horizontally */
+    align-items: center;
+    /* Align icon and text horizontally */
     justify-content: center;
     text-align: center;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    white-space: nowrap; /* Prevent text wrapping */
-    flex-shrink: 0; /* Prevent cards from shrinking too much */
+    white-space: nowrap;
+    /* Prevent text wrapping */
+    flex-shrink: 0;
+    /* Prevent cards from shrinking too much */
 }
 
 .industry-card:hover {
-    transform: translateY(-3px); /* Slightly less hover effect */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Lighter shadow on hover */
+    transform: translateY(-3px);
+    /* Slightly less hover effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Lighter shadow on hover */
 }
 
 .industry-card i {
-    font-size: 0.9rem; /* Even smaller icon */
+    font-size: 0.9rem;
+    /* Even smaller icon */
     color: var(--color-primary);
-    margin-right: var(--spacing-xs); /* Margin to separate icon from text */
-    margin-bottom: 0; /* Remove bottom margin */
+    margin-right: var(--spacing-xs);
+    /* Margin to separate icon from text */
+    margin-bottom: 0;
+    /* Remove bottom margin */
 }
 
 .industry-card span {
-    font-size: 0.9rem; /* Keep font size consistent */
+    font-size: 0.9rem;
+    /* Keep font size consistent */
 }
 
 /* CTA Bottom */
 .cta-bottom {
     background-color: var(--color-primary);
     color: var(--color-white);
-    padding: var(--spacing-s) 0; /* Make it a bit smaller */
+    padding: var(--spacing-s) 0;
+    /* Make it a bit smaller */
 }
 
 .cta-bottom h2 {
     color: var(--color-white);
 }
 
-.cta-bottom .container {
-}
+.cta-bottom .container {}
 
 /* Partnership Model Page */
 .philosophy-content blockquote {
@@ -495,7 +509,8 @@ section:first-of-type {
     border-radius: 8px;
     box-shadow: var(--box-shadow);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    text-align: center; /* Center content within the pillar card */
+    text-align: center;
+    /* Center content within the pillar card */
 }
 
 .pillar:hover {
@@ -504,7 +519,8 @@ section:first-of-type {
 }
 
 .pillar i {
-    font-size: 3rem; /* Large icon size */
+    font-size: 3rem;
+    /* Large icon size */
     color: var(--color-primary);
     margin-bottom: var(--spacing-s);
 }
@@ -534,7 +550,8 @@ section:first-of-type {
 }
 
 .databuddy-difference {
-    /* text-align: center; */ /* Removed as content inside should be left-aligned */
+    /* text-align: center; */
+    /* Removed as content inside should be left-aligned */
 }
 
 .databuddy-difference .section-title {
@@ -543,18 +560,22 @@ section:first-of-type {
 
 .databuddy-difference p {
     text-align: left;
-    max-width: 800px; /* Adjust as needed */
+    max-width: 800px;
+    /* Adjust as needed */
     margin-left: auto;
     margin-right: auto;
 }
 
 .databuddy-difference ul {
     text-align: left;
-    max-width: 800px; /* Adjust as needed */
+    max-width: 800px;
+    /* Adjust as needed */
     margin-left: auto;
     margin-right: auto;
-    list-style-type: disc; /* Ensure bullets are visible */
-    padding-left: 20px; /* Add some padding for bullets */
+    list-style-type: disc;
+    /* Ensure bullets are visible */
+    padding-left: 20px;
+    /* Add some padding for bullets */
 }
 
 .databuddy-solution h2 {
@@ -563,7 +584,8 @@ section:first-of-type {
 
 .databuddy-solution p {
     text-align: left;
-    max-width: 800px; /* Adjust as needed */
+    max-width: 800px;
+    /* Adjust as needed */
     margin-left: auto;
     margin-right: auto;
 }
@@ -719,18 +741,24 @@ section:first-of-type {
 .what-to-expect {
     background-color: var(--color-background);
     border: 1px solid var(--color-border);
-    padding: var(--spacing-s); /* Reduced padding */
-    border-radius: 12px; /* Slightly more rounded */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
+    padding: var(--spacing-s);
+    /* Reduced padding */
+    border-radius: 12px;
+    /* Slightly more rounded */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    /* More pronounced shadow */
 }
 
 .contact-form .form-group {
-    margin-bottom: 0.2rem; /* Spacing between form groups */
+    margin-bottom: 0.2rem;
+    /* Spacing between form groups */
 }
 
 .contact-form label {
-    display: block; /* Ensure label is on its own line */
-    margin-bottom: 0.1rem; /* Space between label and input */
+    display: block;
+    /* Ensure label is on its own line */
+    margin-bottom: 0.1rem;
+    /* Space between label and input */
     font-weight: 700;
     color: var(--color-text);
     font-size: 0.95rem;
@@ -740,58 +768,80 @@ section:first-of-type {
 .contact-form input[type="email"],
 .contact-form textarea {
     width: 100%;
-    padding: var(--spacing-xs); /* Reduced padding */
+    padding: var(--spacing-xs);
+    /* Reduced padding */
     border: 1px solid var(--color-border);
-    border-radius: 8px; /* Rounded input fields */
+    border-radius: 8px;
+    /* Rounded input fields */
     font-family: var(--font-family-body);
     font-size: 1rem;
     color: var(--color-text);
-    background-color: var(--color-background-light); /* Light background for inputs */
+    background-color: var(--color-background-light);
+    /* Light background for inputs */
     transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .contact-form input[type="text"]:focus,
 .contact-form input[type="email"]:focus,
 .contact-form textarea:focus {
-    border-color: var(--color-primary); /* Highlight on focus */
-    box-shadow: 0 0 0 3px rgba(99, 80, 236, 0.2); /* Subtle glow on focus */
-    outline: none; /* Remove default outline */
+    border-color: var(--color-primary);
+    /* Highlight on focus */
+    box-shadow: 0 0 0 3px rgba(99, 80, 236, 0.2);
+    /* Subtle glow on focus */
+    outline: none;
+    /* Remove default outline */
 }
 
 .contact-form textarea {
-    resize: vertical; /* Allow vertical resizing */
-    min-height: 120px; /* Minimum height for textarea */
+    resize: vertical;
+    /* Allow vertical resizing */
+    min-height: 120px;
+    /* Minimum height for textarea */
 }
 
 .contact-form .error-message {
     color: var(--color-error);
     font-size: 0.85rem;
     margin-top: var(--spacing-xs);
-    min-height: 1.2rem; /* Reserve space for error message */
+    min-height: 1.2rem;
+    /* Reserve space for error message */
 }
 
 .cta-button {
-    display: block; /* Make it a block element */
-    width: fit-content; /* Allow width to fit content */
+    display: block;
+    /* Make it a block element */
+    width: fit-content;
+    /* Allow width to fit content */
     margin-left: auto;
     margin-right: auto;
-    padding: var(--spacing-m) var(--spacing-l); /* Increased padding */
-    font-size: 1.2rem; /* Increased font size */
+    padding: var(--spacing-m) var(--spacing-l);
+    /* Increased padding */
+    font-size: 1.2rem;
+    /* Increased font size */
     border-radius: 8px;
     cursor: pointer;
-    background-color: var(--color-primary); /* Purple background */
-    color: var(--color-white); /* White text */
-    border: 2px solid var(--color-primary); /* Add a solid border */
-    text-decoration: none; /* Ensure no underline */
+    background-color: var(--color-primary);
+    /* Purple background */
+    color: var(--color-white);
+    /* White text */
+    border: 2px solid var(--color-primary);
+    /* Add a solid border */
+    text-decoration: none;
+    /* Ensure no underline */
     transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out, border-color 0.2s ease-in-out;
 }
 
 .cta-button:hover {
-    background-color: #523ecb; /* Darker shade of purple on hover */
-    border-color: #523ecb; /* Darken border on hover */
-    transform: translateY(-2px); /* Slight lift on hover */
-    color: var(--color-white); /* Ensure text remains white */
-    text-decoration: none; /* Ensure no underline on hover */
+    background-color: #523ecb;
+    /* Darker shade of purple on hover */
+    border-color: #523ecb;
+    /* Darken border on hover */
+    transform: translateY(-2px);
+    /* Slight lift on hover */
+    color: var(--color-white);
+    /* Ensure text remains white */
+    text-decoration: none;
+    /* Ensure no underline on hover */
 }
 
 .cta-bottom .cta-button {
@@ -856,7 +906,8 @@ section:first-of-type {
     background-color: var(--color-primary);
     color: var(--color-white);
     padding: var(--spacing-s) var(--spacing-m);
-    border-radius: 20px; /* Rounded edges for cloud shape */
+    border-radius: 20px;
+    /* Rounded edges for cloud shape */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     font-size: 0.9rem;
     text-align: center;
@@ -875,7 +926,8 @@ section:first-of-type {
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-top: 10px solid var(--color-primary);
-    bottom: -10px; /* Position the tail below the cloud */
+    bottom: -10px;
+    /* Position the tail below the cloud */
     left: 50%;
     transform: translateX(-50%);
 }
@@ -887,23 +939,30 @@ section:first-of-type {
     padding: var(--spacing-l);
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    margin: var(--spacing-xl) auto; /* Center and add vertical spacing */
-    max-width: 800px; /* Limit width for readability */
+    margin: var(--spacing-xl) auto;
+    /* Center and add vertical spacing */
+    max-width: 800px;
+    /* Limit width for readability */
     display: flex;
-    flex-direction: column; /* Stack icon and quote vertically */
-    align-items: center; /* Center items horizontally */
+    flex-direction: column;
+    /* Stack icon and quote vertically */
+    align-items: center;
+    /* Center items horizontally */
     text-align: center;
 }
 
 .quote-icon {
-    font-size: 4rem; /* Large icon size */
+    font-size: 4rem;
+    /* Large icon size */
     color: var(--color-primary);
     margin-bottom: var(--spacing-m);
 }
 
 .quote-wrapper blockquote {
-    margin: 0; /* Remove default blockquote margin */
-    font-size: 1.5rem; /* Larger font size for quote */
+    margin: 0;
+    /* Remove default blockquote margin */
+    font-size: 1.5rem;
+    /* Larger font size for quote */
     line-height: 1.6;
     font-style: italic;
     color: var(--color-text);
@@ -920,14 +979,16 @@ section:first-of-type {
 .main-footer {
     background-color: var(--color-text);
     color: var(--color-white);
-    padding: var(--spacing-xl) var(--spacing-m) var(--spacing-m); /* Added horizontal padding */
+    padding: var(--spacing-xl) var(--spacing-m) var(--spacing-m);
+    /* Added horizontal padding */
     font-size: 0.9rem;
 }
 
 .main-footer .container {
     display: grid;
     gap: var(--spacing-l);
-    padding: 0; /* Removed horizontal padding */
+    padding: 0;
+    /* Removed horizontal padding */
 }
 
 .footer-grid {
@@ -1027,18 +1088,19 @@ section:first-of-type {
     }
 
     .pillars-grid,
-.engagement-steps {
+    .engagement-steps {
         grid-template-columns: repeat(2, 1fr);
     }
 
     .industry-grid {
-        grid-template-columns: repeat(3, 1fr); /* Keep 3 columns for tablet */
+        grid-template-columns: repeat(3, 1fr);
+        /* Keep 3 columns for tablet */
     }
 
 
 
     .case-study-grid,
-.case-study-grid-full {
+    .case-study-grid-full {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -1050,7 +1112,7 @@ section:first-of-type {
     }
 
     .contact-form-container,
-.what-to-expect {
+    .what-to-expect {
         text-align: left;
     }
 
@@ -1106,12 +1168,13 @@ section:first-of-type {
     }
 
     .pillars-grid,
-.engagement-steps {
+    .engagement-steps {
         grid-template-columns: repeat(3, 1fr);
     }
 
     .industry-grid {
-        grid-template-columns: repeat(5, 1fr); /* Adjusted for desktop to show more columns */
+        grid-template-columns: repeat(5, 1fr);
+        /* Adjusted for desktop to show more columns */
     }
 
 

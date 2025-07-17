@@ -1,0 +1,6 @@
+# Allow all web crawlers access to all content
+User-agent: *
+Disallow:
+
+# Provide the location of the XML sitemap
+Sitemap: https://databuddy.us/sitemap.xml
