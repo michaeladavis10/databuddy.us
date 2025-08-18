@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael A. Davis - Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            /* slate-50 */
+        }
+
+        /* A simple print-friendly style */
+        @media print {
+            /* --- CRITICAL PRINT STYLES --- */
+
+            /* Sets the page margins for the PDF document itself. */
+            @page {
+                size: letter;
+                margin: 0.5in;
+            }
+
+            body {
+                background-color: #ffffff;
+                -webkit-print-color-adjust: exact;
+                /* Ensures colors print correctly in Chrome/Safari. */
+                color-adjust: exact;
+                /* Ensures colors print correctly in Firefox. */
+            }
+
+            /* Hides any element with the .no-print class from the printed version. */
+            .no-print {
+                display: none;
+            }
+
+            /* Removes the container's padding, margin, and shadow for printing to use the full page width. */
+            .print-container {
+                box-shadow: none;
+                margin: 0 !important;
+                padding: 0 !important;
+                max-width: 100%;
+                border: none;
+            }
+
+            /* This is the key rule that forces the two-column grid layout into a single column for printing. */
+            .print-single-col {
+                display: block !important;
+            }
+
+            /* Ensures the 'Show Full History' details section is automatically open when printed. */
+            details {
+                open: true;
+            }
+
+            /* Hides the 'Show Full History' button itself from the printed version. */
+            summary {
+                display: none;
+            }
+        }
+
+        summary {
+            list-style: none;
+            /* Remove default marker */
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+            /* Remove default marker for Chrome/Safari */
+        }
+    </style>
+</head>
+
+<body class="antialiased text-slate-700">
+
+    <div
+        class="print-container container mx-auto max-w-6xl p-4 sm:p-6 lg:p-12 my-8 sm:my-12 lg:my-16 bg-white rounded-lg shadow-2xl shadow-slate-300/30">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 print:block print-single-col">
+
+            <!-- Left Column / Sidebar -->
+            <aside class="lg:col-span-1 print:mb-4">
+                <div class="space-y-8 print:space-y-6">
+                    <!-- Contact Info -->
+                    <section>
+                        <h1 class="text-3xl sm:text-4xl font-bold text-slate-900 print:text-center print:text-2xl">
+                            Michael A. Davis</h1>
+                        <p class="mt-2 text-lg font-medium text-slate-600 print:text-center print:text-sm">Fractional Chief Data Officer</p>
+                        <!-- <p class="mt-2 text-lg font-medium text-slate-600 print:text-center print:text-sm">Data
+                            Scientist & Business Strategist</p> -->
+                        <div
+                            class="mt-6 space-y-3 text-sm print:grid print:grid-cols-2 print:gap-x-4 print:mt-3 print:space-y-1 print:text-xs">
+                            <a href="mailto:mdavis@databuddy.us"
+                                class="flex items-center gap-3 hover:text-blue-600 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="text-slate-500 print:w-3 print:h-3">
+                                    <rect width="20" height="16" x="2" y="4" rx="2" />
+                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                                </svg>
+                                <span>mdavis@databuddy.us</span>
+                            </a>
+                            <div class="flex items-center gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="text-slate-500 print:w-3 print:h-3">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                </svg>
+                                <span>(916) 581-0056</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="text-slate-500 print:w-3 print:h-3">
+                                    <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9" />
+                                    <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5" />
+                                    <circle cx="12" cy="12" r="2" />
+                                    <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5" />
+                                    <path d="M19.1 4.9C23 8.8 23 15.1 19.1 19" />
+                                </svg>
+                                <span>Sacramento, CA 95814</span>
+                            </div>
+                            <a href="https://linkedin.com/in/michaeladavis1" target="_blank" rel="noopener noreferrer"
+                                class="flex items-center gap-3 hover:text-blue-600 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="text-slate-500 print:w-3 print:h-3">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                    <rect width="4" height="12" x="2" y="9" />
+                                    <circle cx="4" cy="4" r="2" />
+                                </svg>
+                                <span>linkedin.com/in/michaeladavis1</span>
+                            </a>
+                        </div>
+                    </section>
+                </div>
+            </aside>
+
+            <!-- Right Column / Main Content -->
+            <main class="lg:col-span-2">
+                <!-- Summary -->
+                <section>
+                    <h2
+                        class="text-2xl font-bold text-slate-800 print:text-lg print:border-b print:border-slate-300 print:pb-1">
+                        Summary</h2>
+                    <div
+                        class="mt-4 prose prose-slate max-w-none text-slate-600 print:prose-sm print:mt-2 print:text-xs print:leading-snug">
+                        <!-- <p>Michael A. Davis is a natural systems thinker who solves intractable business problems by
+                            deconstructing and mastering any environment he enters. His power lies in translating deep,
+                            systematic analysis into decisive, real-world results - an approach that allowed him to
+                            architect data strategy at industry leaders like Snowflake and LinkedIn, establish his own
+                            consultancy, DataBuddy, and take ownership of a franchise's operational and financial
+                            systems.</p>
+                        <p>This professional discipline is fueled by a lifelong pattern of 360-degree mastery. An
+                            introvert by nature, his focus is deep and analytical, applying the same systematic rigor to
+                            competitive soccer as a player, coach, and referee, and to the Ironman triathlon as an
+                            athlete and coach. Fueled by a relentless intellectual curiosity, he continually pursues new
+                            knowledge in AI, actuarial science, and finance, a drive that extends to his role as an
+                            adjunct university lecturer and his hands-on volunteer work with Habitat for Humanity. He is
+                            not the loudest voice in the room. He is the quiet force who has already seen the entire
+                            board, understood the problem at a level others have not, and designed the winning move.</p> -->
+                        <p> Michael A. Davis is an executive-level data strategist and business leader with a proven track record 
+                            of architecting and deploying AI-driven solutions to solve complex business challenges. With experience 
+                            as a fractional Chief Data Officer for diverse clients, he excels at translating sophisticated analytics 
+                            into tangible business value. A systems thinker at heart, he applies his analytical rigor to not only 
+                            solve complex problems but also to develop innovative frameworks and insights, a capability demonstrated 
+                            through his academic and professional engagement
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Experience -->
+                <section class="mt-8 print:mt-3">
+                    <h2
+                        class="text-2xl font-bold text-slate-800 print:text-lg print:border-b print:border-slate-300 print:pb-1">
+                        Experience</h2>
+                    <div
+                        class="mt-4 space-y-5 border-l-2 border-slate-200 pl-6 print:border-none print:pl-0 print:mt-2 print:space-y-3">
+                        <!-- Job Item -->
+                        <div class="relative print:pl-4">
+                            <div
+                                class="absolute -left-[34px] top-1 h-4 w-4 rounded-full bg-blue-500 ring-4 ring-white print:hidden">
+                            </div>
+                            <p class="text-sm font-medium text-slate-500 print:text-xs">2021 - Present</p>
+                            <h3 class="mt-1 text-lg font-semibold text-slate-900 print:text-sm">DataBuddy LLC</h3>
+                            <p class="font-medium text-slate-700 print:text-xs">Founder & Principal Consultant</p>
+                            <ul
+                                class="mt-1 list-disc list-outside pl-5 space-y-1 text-slate-600 print:text-xs print:leading-snug">
+                                <li>Provide executive-level strategy and hands-on execution as a fractional Chief Data
+                                    Officer for a diverse client portfolio across key industries including Private
+                                    Equity, B2B SaaS, Medical Devices, Logistics & Supply Chain, and National Sporting
+                                    Bodies.</li>
+                                <li>Architect and implement custom end-to-end data systems, machine learning models, and
+                                    AI solutions to solve core business problems, directly increasing revenue and
+                                    operational efficiency for clients.</li>
+                            </ul>
+                        </div>
+                        <!-- Job Item -->
+                        <div class="relative print:pl-4">
+                            <div
+                                class="absolute -left-[34px] top-1 h-4 w-4 rounded-full bg-blue-500 ring-4 ring-white print:hidden">
+                            </div>
+                            <p class="text-sm font-medium text-slate-500 print:text-xs">2019 - 2021</p>
+                            <h3 class="mt-1 text-lg font-semibold text-slate-900 print:text-sm">Snowflake</h3>
+                            <p class="font-medium text-slate-700 print:text-xs">Growth Data, Sales</p>
+                            <ul
+                                class="mt-1 list-disc list-outside pl-5 space-y-1 text-slate-600 print:text-xs print:leading-snug">
+                                <li>Owned and led the CRM data strategy for the sales organization during a period
+                                    of hyper-growth, building the analytical frameworks that guided market penetration
+                                    and expansion.</li>
+                                <li>Engineered a scalable system for high-value new account identification and
+                                    territory assignment, providing a strategic foundation for sales team targeting.</li>
+                            </ul>
+                        </div>
+                        <!-- Job Item -->
+                        <div class="relative print:pl-4">
+                            <div
+                                class="absolute -left-[34px] top-1 h-4 w-4 rounded-full bg-blue-500 ring-4 ring-white print:hidden">
+                            </div>
+                            <p class="text-sm font-medium text-slate-500 print:text-xs">2017 - 2019</p>
+                            <h3 class="mt-1 text-lg font-semibold text-slate-900 print:text-sm">LinkedIn</h3>
+                            <p class="font-medium text-slate-700 print:text-xs">Tech Lead, GTM Data Science</p>
+                            <ul
+                                class="mt-1 list-disc list-outside pl-5 space-y-1 text-slate-600 print:text-xs print:leading-snug">
+                                <li>Led the end-to-end re-architecture of the company’s core marketing and sales funnel
+                                    reporting, providing unprecedented clarity into campaign ROI and influencing millions
+                                    in marketing spend.</li>
+                                <li>Designed and implemented a marketing attribution framework, unifying disparate data sources 
+                                    into a single source of truth for all GTM activities.</li>
+                                <li>Recruited and mentored a high-performing team of data scientists,
+                                    establishing a culture of technical excellence and business impact.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Expandable Section -->
+                        <details>
+                            <summary
+                                class="cursor-pointer text-center text-sm font-medium text-blue-600 hover:text-blue-800 no-print">
+                                Show Full History
+                            </summary>
+                            <div class="mt-5 space-y-5 print:mt-3 print:space-y-3">
+                                <!-- Job Item -->
+                                <div class="relative print:pl-4">
+                                    <div
+                                        class="absolute -left-[34px] top-1 h-4 w-4 rounded-full bg-blue-500 ring-4 ring-white print:hidden">
+                                    </div>
+                                    <p class="text-sm font-medium text-slate-500 print:text-xs">2015 - 2017</p>
+                                    <h3 class="mt-1 text-lg font-semibold text-slate-900 print:text-sm">BMC Software
+                                    </h3>
+                                    <p class="font-medium text-slate-700 print:text-xs">Talent Analytics, Employee
+                                        Experience</p>
+                                    <ul
+                                        class="mt-1 list-disc list-outside pl-5 space-y-1 text-slate-600 print:text-xs print:leading-snug">
+                                        <li>Developed predictive models to identify flight-risk employees, enabling
+                                            proactive retention strategies.</li>
+                                        <li>Streamlined HR and recruiting reporting, reducing manual work by 80%.</li>
+                                    </ul>
+                                </div>
+                                <!-- Job Item -->
+                                <div class="relative print:pl-4">
+                                    <div
+                                        class="absolute -left-[34px] top-1 h-4 w-4 rounded-full bg-blue-500 ring-4 ring-white print:hidden">
+                                    </div>
+                                    <p class="text-sm font-medium text-slate-500 print:text-xs">2014 - 2015</p>
+                                    <h3 class="mt-1 text-lg font-semibold text-slate-900 print:text-sm">LinkedIn</h3>
+                                    <p class="font-medium text-slate-700 print:text-xs">Data Scientist, Business
+                                        Analytics</p>
+                                    <ul
+                                        class="mt-1 list-disc list-outside pl-5 space-y-1 text-slate-600 print:text-xs print:leading-snug">
+                                        <li>Developed a patented crowd-sourcing methodology for ads-revenue forecasting,
+                                            improving forecast accuracy and eliminating 10,000 annual hours of manual
+                                            work.</li>
+                                        <li>Built a predictive model to assess potential client spending, enhancing
+                                            customer targeting and prioritization across multiple business units.</li>
+                                    </ul>
+                                </div>
+                                <!-- Job Item -->
+                                <div class="relative print:pl-4">
+                                    <div
+                                        class="absolute -left-[34px] top-1 h-4 w-4 rounded-full bg-blue-500 ring-4 ring-white print:hidden">
+                                    </div>
+                                    <p class="text-sm font-medium text-slate-500 print:text-xs">2012 - 2014</p>
+                                    <h3 class="mt-1 text-lg font-semibold text-slate-900 print:text-sm">Flipkey</h3>
+                                    <p class="font-medium text-slate-700 print:text-xs">Sr. Business Analyst</p>
+                                    <ul
+                                        class="mt-1 list-disc list-outside pl-5 space-y-1 text-slate-600 print:text-xs print:leading-snug">
+                                        <li>Increased total company revenue by 6% by overhauling the core search
+                                            algorithm.</li>
+                                        <li>Built the company's first in-house A/B testing framework, enabling a culture
+                                            of data-driven product development.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+                </section>
+
+                <!-- START: Page Break and Repeating Header Code -->
+                <!-- This div is hidden on screen but becomes visible on page 2 of the printout. -->
+                <div class="hidden print:block print:mb-4 print:break-before-page">
+                    <!-- This is the repeating header for the second page. -->
+                    <h1 class="text-center text-2xl font-bold text-slate-900">Michael A. Davis</h1>
+                    <p class="text-center text-sm font-medium text-slate-600">Fractional Chief Data Officer</p>
+                    <!-- <p class="text-center text-sm font-medium text-slate-600">Data Scientist & Business Strategist</p> -->
+                </div>
+
+                <!-- The 'print:break-before-page' class suggests to the browser to start a new page here. -->
+                <!-- Teaching -->
+                <section class="mt-8 print:mt-3 ">
+                    <!-- END: Page Break and Repeating Header Code -->
+
+                    <h2
+                        class="text-2xl font-bold text-slate-800 print:text-lg print:border-b print:border-slate-300 print:pb-1">
+                        Teaching & Academic Engagement</h2>
+                    <div class="mt-4 space-y-4 print:mt-2 print:space-y-2">
+                        <div>
+                            <h3 class="text-lg font-semibold text-slate-900 print:text-sm">Santa Clara University,
+                                Leavey School of Business</h3>
+                            <p class="font-medium text-slate-700 print:text-xs">Adjunct Lecturer</p>
+                            <p class="mt-1 text-slate-600 print:text-xs print:leading-snug">Cultivated the next generation
+                                of data leaders by developing and teaching practical courses on data analytics, business
+                                intelligence, and programming.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-slate-900 print:text-sm">Northeastern University</h3>
+                            <p class="font-medium text-slate-700 print:text-xs">Adjunct Lecturer</p>
+                            <p class="mt-1 text-slate-600 print:text-xs print:leading-snug">Taught courses in calculus
+                                and statistics for business and healthcare, applying quantitative concepts to real-world
+                                industry problems.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Education & Certs -->
+                <section class="mt-8 print:mt-3">
+                    <h2
+                        class="text-2xl font-bold text-slate-800 print:text-lg print:border-b print:border-slate-300 print:pb-1">
+                        Education & Certifications</h2>
+                    <div class="mt-4 space-y-4 print:mt-2 print:space-y-2">
+                        <div>
+                            <h3 class="text-lg font-semibold text-slate-900 print:text-sm">Northeastern University</h3>
+                            <p class="font-medium text-slate-700 print:text-xs">Master of Science, Industrial & Applied
+                                Mathematics</p>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-slate-900 print:text-sm">Clarkson University</h3>
+                            <p class="font-medium text-slate-700 print:text-xs">Bachelor of Science, Applied Mathematics
+                                & Statistics w/ Honors</p>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-slate-900 print:text-sm">MITx MicroMasters</h3>
+                            <p class="font-medium text-slate-700 print:text-xs">Logistics, Materials, and Supply Chain
+                                Management</p>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-slate-900 print:text-sm">CTEC Registered Tax Preparer
+                                (CRTP)</h3>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Technical Skills -->
+                <section class="mt-8 print:mt-3">
+                    <h2
+                        class="text-2xl font-bold text-slate-800 print:text-lg print:border-b print:border-slate-300 print:pb-1">
+                        Technical Skills</h2>
+                    <div
+                        class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 print:mt-2 print:gap-x-4 print:gap-y-1 print:text-xs">
+                        <div>
+                            <h3 class="font-semibold text-slate-900">Core Competencies</h3>
+                            <p>Data Strategy, P&L Analysis, Predictive Modeling, AI</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-slate-900">Languages</h3>
+                            <p>Python (Pandas, NumPy, Scikit-learn), SQL, R, Scala, JavaScript, HTML, CSS</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-slate-900">Databases</h3>
+                            <p>Snowflake, BigQuery, Redshift, PostgreSQL, MySQL</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-slate-900">Cloud Platforms</h3>
+                            <p>AWS, Microsoft Azure, Google Cloud Platform (GCP)</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-slate-900">BI & Visualization</h3>
+                            <p>Tableau, Looker, Power BI, D3.js</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-slate-900">Other Tools</h3>
+                            <p>Airflow, Git, Spark, Hive, Salesforce, Hubspot, QuickBooks</p>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+</body>
+
+</html>
