@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataBuddy Referral One-Pager</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for 'Inter' -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Lora:wght@700&display=swap" rel="stylesheet">
+    <style>
+    /* 
+      ================================================================================
+      CSS for DataBuddy Referral One-Pager (Revised for Optimal Printing v5)
+      - Refined typography and layout for a more professional print appearance.
+      ================================================================================
+    */
+
+    /* 
+      --------------------------------------------------------------------------------
+      1. Base & Font Styles
+      --------------------------------------------------------------------------------
+    */
+    body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f3f4f6; /* Screen background */
+    }
+
+    h1, .section-title {
+        font-family: 'Lora', serif;
+    }
+
+    /* 
+      --------------------------------------------------------------------------------
+      2. Screen-Only Styles
+      --------------------------------------------------------------------------------
+    */
+    @media screen {
+        .page-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin: 2rem auto;
+        }
+
+        .page {
+            background-color: #ffffff;
+            width: 8.5in;
+            min-height: 11in; 
+            padding: 0.75in;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            box-sizing: border-box;
+        }
+    }
+
+    /* 
+      --------------------------------------------------------------------------------
+      3. Shared Layout Styles (Used by both Screen and Print)
+      --------------------------------------------------------------------------------
+    */
+    .two-column-layout {
+        display: flex;
+        gap: 0.4in;
+    }
+    .two-column-layout > div {
+        width: calc(50% - 0.2in);
+    }
+    .break-inside-avoid {
+        break-inside: avoid;
+    }
+
+    /* 
+      --------------------------------------------------------------------------------
+      4. Print-Specific Styles
+      --------------------------------------------------------------------------------
+    */
+    @media print {
+        @page {
+            size: 8.5in 11in;
+            margin: 0.75in; /* Consistent margin for the printed page */
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: #ffffff !important;
+            font-size: 10pt; /* Base font size for print */
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .page-container {
+            margin: 0;
+            gap: 0;
+        }
+
+        .page {
+            width: 100% !important;
+            min-height: 0 !important;
+            height: auto !important;
+            box-shadow: none !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            border-radius: 0 !important;
+            position: relative;
+        }
+
+        .page-one {
+            page-break-after: always;
+        }
+
+        h1 { font-size: 24pt !important; }
+        .section-.title { font-size: 15pt !important; margin-bottom: 0.25rem !important; }
+        .sub-title { font-size: 11pt !important; font-weight: 600; margin-top: 0.25rem !important; margin-bottom: 0.15rem !important; }
+        p, li { 
+            font-size: 10pt !important; 
+            line-height: 1.5 !important; /* Improved line height for readability */
+        }
+        .text-sm {
+            font-size: 9.5pt !important;
+        }
+
+        /* Tailwind overrides for print spacing */
+        .mb-6 { margin-bottom: 1rem !important; }
+        .mb-4 { margin-bottom: 0.75rem !important; }
+        .mb-3 { margin-bottom: 0.5rem !important; }
+        .mt-6 { margin-top: 1rem !important; }
+        .p-4 { padding: 0.5rem !important; }
+        .p-2, .p-1\.5 { padding: 0.25rem !important; }
+        .h-10 { height: 2.2rem !important; }
+        .w-6, .h-6 { width: 1.2rem !important; height: 1.2rem !important; }
+        .space-y-2 > * + * { margin-top: 0.25rem !important; }
+        .space-y-3 > * + * { margin-top: 0.4rem !important; }
+        .space-y-4 > * + * { margin-top: 0.6rem !important; }
+        .space-y-6 > * + * { margin-top: 0.8rem !important; }
+    }
+</style>
+</head>
+<body class="bg-gray-100 flex justify-center p-8">
+
+    <div class="page-container">
+
+        <!-- Page 1: The Pitch & The Playbook -->
+        <div class="page page-one">
+            <div class="content-wrapper">
+                <!-- Header Section -->
+                <div class="flex justify-between items-center mb-6">
+                    <h1 class="text-3xl font-bold text-gray-900">How to Refer to DataBuddy</h1>
+                    <img src="assets/DataBuddy logo color RGB.png" alt="DataBuddy Logo" class="h-10">
+                </div>
+
+                <!-- Referral Incentive Section -->
+                <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 rounded-lg mb-4">
+                    <p class="font-bold">What's in it for you?</p>
+                    <p>For every successful referral that becomes a DataBuddy client, we'll give you <strong>$500</strong> as a thank you. It's our way of showing appreciation for helping us grow.</p>
+                </div>
+
+                <!-- Section 1: What is DataBuddy? -->
+                <div class="mb-4">
+                    <h2 class="section-title">1. What is DataBuddy?</h2>
+                    <p class="text-gray-600 leading-relaxed">DataBuddy is a data consultancy founded on a simple premise: business owners deserve a technical partner who operates with an owner's mindset. We bridge the gap between business strategy and technical execution, transforming complex data from a source of confusion into a tool for driving profit and strategic growth. We are the quiet professionals, focused on delivering tangible outcomes.</p>
+                </div>
+
+                <!-- Section 2 & 3 Container -->
+                <div class="two-column-layout mb-4">
+                    <!-- Section 2: What Makes DataBuddy Different -->
+                    <div class="break-inside-avoid">
+                        <h2 class="section-title">2. What Makes DataBuddy Different</h2>
+                        <p class="text-gray-600 leading-relaxed mb-4">We're not traditional consultants or freelance developers. We are a unique hybrid that acts as a true growth partner. Here are the core concepts to share:</p>
+                        <div class="space-y-3">
+                            <div class="bg-blue-50 p-1.5 rounded-lg flex items-center">
+                                <a href="#"><svg class="w-6 h-6 text-blue-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.898 20.562L16.25 21.75l-.648-1.188a2.25 2.25 0 01-1.47-1.47L12.964 18l1.188-.648a2.25 2.25 0 011.47-1.47L16.25 15l.648 1.188a2.25 2.25 0 011.47 1.47L19.536 18l-1.188.648a2.25 2.25 0 01-1.47 1.47z"></path></svg></a>
+                                <div>
+                                    <p class="sub-title">A Unique Blend of Expertise</p>
+                                    <p class="text-gray-600 text-sm">"They blend rare experience: building enterprise data systems for giants like LinkedIn and Snowflake, teaching data analytics to all levels, and hands-on experience as SMB owners. They are fluent in both data and business."</p>
+                                </div>
+                            </div>
+                            <div class="bg-blue-50 p-1.5 rounded-lg flex items-center">
+                                <span class="screen-only-icon">
+                                    <svg class="w-6 h-6 text-blue-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-4.663M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                </span>
+                                <span class="print-only-icon">
+                                    <svg class="w-6 h-6 text-blue-500 mr-4 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                        <path d="M10.5 1.875a1.125 1.125 0 012.25 0v2.393a.375.375 0 00.28.359l1.778.395a1.125 1.125 0 01.915 1.106l-.22 1.762a.375.375 0 00.208.388l1.734.867a1.125 1.125 0 01.52 1.028l-.396 1.778a.375.375 0 00.359.453l1.84.092a1.125 1.125 0 011.028.52l.867 1.734a.375.375 0 00.388.208l1.762-.22a1.125 1.125 0 011.106.915l.395 1.778a.375.375 0 00.359.28v2.393a1.125 1.125 0 01-2.25 0v-2.393a.375.375 0 00-.28-.359l-1.778-.395a1.125 1.125 0 01-.915-1.106l.22-1.762a.375.375 0 00-.208-.388l-1.734-.867a1.125 1.125 0 01-.52-1.028l.396-1.778a.375.375 0 00-.359-.453l-1.84-.092a1.125 1.125 0 01-1.028-.52l-.867-1.734a.375.375 0 00-.388-.208l-1.762.22a1.125 1.125 0 01-1.106-.915l-.395-1.778a.375.375 0 00-.359-.28V1.875z" />
+                                        <path d="M6.11 6.712a.375.375 0 00-.208-.388l-1.734-.867a1.125 1.125 0 00-1.028.52L1.362 7.71A.375.375 0 001.57 8.1l1.762.22a1.125 1.125 0 001.106-.915l.395-1.778a.375.375 0 00-.28-.359L2.25 3.375a1.125 1.125 0 010-2.25v.001l2.393.001a.375.375 0 00.359-.28l.395-1.778a1.125 1.125 0 011.106-.915l1.762.22a.375.375 0 00.388-.208l.867-1.734a1.125 1.125 0 011.028-.52l1.84.092a.375.375 0 00.453-.359l.396-1.778a1.125 1.125 0 011.028-.52l1.734.867a.375.375 0 00.388-.208l.22-1.762a1.125 1.125 0 01.915-1.106l1.778-.395a.375.375 0 00.28-.359V1.875a1.125 1.125 0 01-2.25 0v-2.393a.375.375 0 00-.28-.359l-1.778-.395a1.125 1.125 0 01-.915-1.106l.22-1.762a.375.375 0 00-.208-.388l-1.734-.867a1.125 1.125 0 01-.52-1.028l.396-1.778a.375.375 0 00-.359-.453l-1.84-.092a1.125 1.125 0 01-1.028-.52L7.71 1.362a.375.375 0 00-.388.208l-1.762.22a1.125 1.125 0 01-1.106.915l-.395 1.778a.375.375 0 00-.359.28L1.875 6.75a1.125 1.125 0 010 2.25h2.393a.375.375 0 00.28.359l1.778.395a1.125 1.125 0 01.915 1.106l-.22 1.762a.375.375 0 00.208.388l1.734.867a1.125 1.125 0 01.52 1.028l-.396 1.778a.375.375 0 00.359.453l1.84.092a1.125 1.125 0 011.028.52l.867 1.734a.375.375 0 00.388.208l1.762-.22a1.125 1.125 0 011.106.915l.395 1.778a.375.375 0 00.359.28v2.393a1.125 1.125 0 01-2.25 0v-2.393a.375.375 0 00-.28-.359l-1.778-.395a1.125 1.125 0 01-.915-1.106l.22-1.762a.375.375 0 00-.208-.388l-1.734-.867a1.125 1.125 0 01-.52-1.028l.396-1.778a.375.375 0 00-.359-.453l-1.84-.092a1.125 1.125 0 01-1.028-.52l-.867-1.734a.375.375 0 00-.388-.208L3.93 8.43a1.125 1.125 0 01-1.106.915l-1.778.395a.375.375 0 00-.28.359v2.393a1.125 1.125 0 01-2.25 0v-2.393a.375.375 0 00-.28-.359L.395 9.955a1.125 1.125 0 01-.915-1.106l.22-1.762a.375.375 0 00-.208-.388L-.867 4.965a1.125 1.125 0 01-.52-1.028l.396-1.778a.375.375 0 00-.359-.453L-3.16 1.614a1.125 1.125 0 01-1.028-.52l-.867-1.734a.375.375 0 00-.388-.208l-1.762.22a1.125 1.125 0 01-1.106-.915l-.395-1.778a.375.375 0 00-.359-.28V-4.875a1.125 1.125 0 012.25 0v2.393c0 .123.067.233.175.298l1.778.395c.58.129.949.69.82 1.27l-.22 1.762a.375.375 0 00.208.388l1.734.867c.51.255.733.83.52 1.338l-.396 1.778a.375.375 0 00.359.453l1.84.092c.56.028.995.492.967 1.052l-.867 1.734a.375.375 0 00.388.208l1.762-.22c.58-.072 1.132.296 1.26.876l.395 1.778a.375.375 0 00.359.28v2.393a1.125 1.125 0 01-2.25 0v-2.393a.375.375 0 00-.28-.359l-1.778-.395a1.125 1.125 0 01-.915-1.106l.22-1.762a.375.375 0 00-.208-.388l-1.734-.867a1.125 1.125 0 01-.52-1.028l.396-1.778a.375.375 0 00-.359-.453l-1.84-.092a1.125 1.125 0 01-1.028-.52l-.867-1.734a.375.375 0 00-.388-.208l-1.762.22a1.125 1.125 0 01-1.106-.915l-.395-1.778a.375.375 0 00-.359-.28V-4.875z" />
+                                      </svg>
+                                </span>
+                                <div>
+                                    <p class="sub-title">A True Partnership Model</p>
+                                    <p class="text-gray-600 text-sm">"Their success is tied to their client's success. They use a unique profit-sharing model, which means they only win when the client wins. It’s a genuine partnership where they have skin in the game, not just a contract for billing hours."</p>
+                                </div>
+                            </div>
+                             <div class="bg-blue-50 p-1.5 rounded-lg flex items-center">
+                                <a href="#"><svg class="w-6 h-6 text-blue-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg></a>
+                                <div>
+                                    <p class="sub-title">Building Long-Term Capability</p>
+                                    <p class="text-gray-600 text-sm">"They don't create dependency. The goal is always to empower the client's team to own their data strategy, providing them with the tools and knowledge for long-term, independent success."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 3: How to Spot an Opportunity -->
+                    <div class="break-inside-avoid">
+                        <h2 class="section-title">3. What to Listen For</h2>
+                        <p class="text-gray-600 leading-relaxed mb-4">A great referral can come from a business feeling pain or from an ambitious leader seeking a competitive edge. Here’s how you can listen for both situations:</p>
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 mb-3">
+                            <p class="font-bold text-gray-800">The Pain-Based Opportunity</p>
+                            <p class="text-sm text-gray-600 mt-1">Listen for leaders who say things like:</p>
+                            <div class="space-y-2 mt-2">
+                                <p class="text-gray-700 text-sm italic border-l-2 border-gray-300 pl-2">"We're flying blind and making too many decisions on gut feel."</p>
+                                <p class="text-gray-700 text-sm italic border-l-2 border-gray-300 pl-2">"We have endless debates because each department brings different numbers to the table."</p>
+                                <p class="text-gray-700 text-sm italic border-l-2 border-gray-300 pl-2">"My team is wasting hours every week manually pulling reports."</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <p class="font-bold text-gray-800">The Growth-Based Opportunity</p>
+                            <p class="text-sm text-gray-600 mt-1">Listen for forward-looking statements like:</p>
+                            <div class="space-y-2 mt-2">
+                                <p class="text-gray-700 text-sm italic border-l-2 border-gray-300 pl-2">"How can we use AI to get a real ROI, not just hype?"</p>
+                                <p class="text-gray-700 text-sm italic border-l-2 border-gray-300 pl-2">"We're doing well, but I know we can be smarter and more efficient."</p>
+                                <p class="text-gray-700 text-sm italic border-l-2 border-gray-300 pl-2">"How can we leverage our data to get ahead of the competition?"</p>
+                                <p class="text-gray-700 text-sm italic border-l-2 border-gray-300 pl-2">"I believe there's untapped value in our operations, but I don't know how to unlock it."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action Section -->
+                <div>
+                    <h2 class="section-title">4. Ready to Refer?</h2>
+                    <div class="bg-indigo-50 p-4 rounded-lg">
+                        <p class="text-lg font-semibold text-indigo-800 mb-2">It's as easy as 1-2-3:</p>
+                        <ol class="list-decimal list-inside text-indigo-700 space-y-2">
+                            <li><strong>Spot an opportunity:</strong> Use the triggers on this page and the examples on the next to identify a great fit.</li>
+                            <li><strong>Make the connection:</strong> Send a warm introduction email to mdavis@databuddy.us, connecting me with your contact.</li>
+                            <li><strong>Get rewarded:</strong> If they become a client, you get paid. It's that simple.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Page 2: The Proof & The Details -->
+        <div class="page page-two">
+            <div class="content-wrapper">
+                <!-- Header Section -->
+                <div class="flex justify-between items-center mb-6">
+                    <h1 class="text-3xl font-bold text-gray-900">What a Great Referral Looks Like</h1>
+                    <img src="assets/DataBuddy logo color RGB.png" alt="DataBuddy Logo" class="h-10">
+                </div>
+
+                <!-- Section: Real-World Examples -->
+                <div>
+                    <h2 class="section-title">The Ideal Client Profile</h2>
+                    <p class="text-gray-600 mb-3 leading-relaxed">Our best partnerships start with ambitious leaders who are ready for growth. They recognize that "gut feel" is no longer enough and are frustrated by the gap between the data they have and the clarity they need. Below is a guide to help you spot a great fit:</p>
+                    
+                    <div class="bg-blue-50 p-4 rounded-lg border border-blue-200 mb-4">
+                        <div class="two-column-layout">
+                            <div>
+                                <p class="font-semibold text-gray-800">Who We Look For</p>
+                                <ul class="list-disc list-inside text-sm text-gray-600 mt-1 space-y-1">
+                                    <li><strong>Company Size:</strong> 10-200 employees.</li>
+                                    <li><strong>Typical Titles:</strong> Owner, Founder, CEO, COO, or a key departmental leader.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800">Key Indicators of a Great Fit</p>
+                                <ul class="list-disc list-inside text-sm text-gray-600 mt-1 space-y-1">
+                                    <li>They lack a dedicated, senior-level data expert in-house.</li>
+                                    <li>They are facing a major business transition (e.g., rapid growth, acquisition).</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="sub-title text-lg font-semibold text-gray-800 mb-2">Real-World Examples</h3>
+                    <div class="two-column-layout">
+                        <div class="space-y-3 break-inside-avoid">
+                            <!-- Case Study 1 -->
+                            <div class="bg-white p-4 rounded-lg border border-gray-200">
+                                <p class="font-semibold text-gray-800">De-Risking High-Stakes R&D</p>
+                                <p class="text-sm text-gray-600 mt-1"><strong class="text-gray-700">Challenge:</strong> A medical device innovator was struggling to analyze disjointed data, risking multi-million dollar R&D investments on non-viable products.</p>
+                                <p class="text-sm text-gray-600 mt-1"><strong class="text-gray-700">Result:</strong> We unified their data and trained their team, enabling them to identify and halt non-viable projects months ahead of schedule, saving millions.</p>
+                            </div>
+                            <!-- Case Study 2 -->
+                            <div class="bg-white p-4 rounded-lg border border-gray-200">
+                                <p class="font-semibold text-gray-800">Solving the "Bad Data" Epidemic</p>
+                                <p class="text-sm text-gray-600 mt-1"><strong class="text-gray-700">Challenge:</strong> A national governing body of sport was overwhelmed by poor data quality, which stemmed from a deep disconnect between their operations and their vendors.</p>
+                                <p class="text-sm text-gray-600 mt-1"><strong class="text-gray-700">Result:</strong> We diagnosed the root cause and delivered a strategic reboot, equipping them with a roadmap to build a data foundation that would serve their mission for years.</p>
+                            </div>
+                        </div>
+                        <div class="space-y-3 break-inside-avoid">
+                            <!-- Case Study 3 -->
+                            <div class="bg-white p-4 rounded-lg border border-gray-200">
+                                <p class="font-semibold text-gray-800">The PE Firm's Technical Advocate</p>
+                                <p class="text-sm text-gray-600 mt-1"><strong class="text-gray-700">Challenge:</strong> A PE firm acquiring companies had no in-house technical advocate, leaving them reliant on potentially biased guidance from vendors and subsidiary staff.</p>
+                                <p class="text-sm text-gray-600 mt-1"><strong class="text-gray-700">Result:</strong> We served as their dedicated technical partner, translating complex options into clear business outcomes and de-risking them from vendor lock-in.</p>
+                            </div>
+                            <!-- Case Study 4 -->
+                            <div class="bg-white p-4 rounded-lg border border-gray-200">
+                                <p class="font-semibold text-gray-800">Empowering the Team for Long-Term Success</p>
+                                <p class="text-sm text-gray-600 mt-1"><strong class="text-gray-700">Challenge:</strong> An EdTech startup needed to develop a data analysis curriculum but lacked the in-house expertise to create practical content and train their instructors.</p>
+                                <p class="text-sm text-gray-600 mt-1"><strong class="text-gray-700">Result:</strong> We designed the curriculum, trained their instructors, and then moved on, empowering them to scale their new program independently and successfully.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Section -->
+                    <div class="mt-6">
+                        <h2 class="section-title">Frequently Asked Questions</h2>
+                        <div class="space-y-3">
+                            <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                                <p class="font-semibold text-gray-800">Does DataBuddy focus on specific industries?</p>
+                                <p class="text-sm text-gray-600 mt-1">The principles of data-driven growth are universal. We have a proven track record across a diverse range of sectors, including Technology, Education, Skilled Trades, National Sporting Bodies, University Research, Medical Devices, Private Equity, B2B SaaS, Finance, Fitness, and Logistics.</p>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                                <p class="font-semibold text-gray-800">What is DataBuddy's geographical focus?</p>
+                                <p class="text-sm text-gray-600 mt-1">We operate on a remote and hybrid model. While headquartered in Sacramento, CA, we serve clients across the United States and frequently travel to work with teams on-site.</p>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                                <p class="font-semibold text-gray-800">How does the referral bonus process work?</p>
+                                <p class="text-sm text-gray-600 mt-1">The process is straightforward. Once you make a warm introduction via email, we handle the rest. If the referred company becomes a DataBuddy client, we will contact you directly to process your <strong>$500</strong> bonus.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+
+</body>
+</html>
